@@ -51,5 +51,65 @@ The game is pretty simple so there's not too much to it
 * Lives remaining must be presented after each guess.
 
 ---
+## Design
 
+### Logo
 
+███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗████████╗██╗░█████╗░███╗░░██╗███████╗██████╗░
+██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝██╔══██╗
+█████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║░░░██║░░░██║██║░░██║██╔██╗██║█████╗░░██████╔╝
+██╔══╝░░░██╔██╗░██╔══╝░░██║░░██╗██║░░░██║░░░██║░░░██║██║░░██║██║╚████║██╔══╝░░██╔══██╗
+███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║███████╗██║░░██║
+╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
+
+The logo was designed using ASCII text generator [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols"). This offers the user a bold enterance to the game and stands out as the first thing you see. This text generator and font style will be used for all main texts, such as game over and congratulations. 
+
+### Colour Scheme
+
+The colours used in text is as follows to add more interactivity to the website. 
+
+---
+
+## Features
+
+### Current Features
+
+### Future Implementations
+
+---
+
+## Bug Fixes
+
+| Bug detected | Action |
+|--|--|
+|XX|YY|
+
+### Unfixed Bugs
+
+---
+
+## Technologies used
+
+---
+
+## Testing
+| Testing |Outcome | Pass or Fail |
+|--|--|--|
+|XX|YY|Pass|
+
+---
+
+## Concluding statements
+
+---
+
+## Deployments
+
+---
+
+## Credits
+* [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/ "Simen Daehlin") - Assistance throughout the project
+
+---
+
+## Inspirations
