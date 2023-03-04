@@ -118,6 +118,31 @@ The colours used in text is as follows to add more interactivity to the website.
 
 ## Deployments
 
+As a pure python code can only be displayed on a terminal of your own machine or within gitpod, the code-instutute python essentials template is to be used on the workspace so that it can later be deployed to Heroku for user accessibility.
+
+* add `\n` (newline) character for all inputs.
+* If for the function of the game, dependancies are required, then all dependancies are to be transferred to **requirements.txt** by typing the following command into the terminal:
+
+>  pip3 freeze > requirements.txt
+
+### Heroku
+
+* **Log in** to your [Heroku](https://www.heroku.com/  "Heroku") account or **sign up** if it's your first time.
+* Activate the Heroku Student Pack as per the instructions on the **Deployments module** in the Love Sandwiches project.
+* On the home page, click the **Create new app** button.
+* Write an **App name** that is unique, the input bar validation will guide you if the app name has been used before or is available.
+* Select the **region** that corresponds to where you are situated.
+* Click the **Create app** button
+* Click on the **settings** tab and click on **config vars** button.
+*  Add a Config var with a key of `PORT` and a value of `8000`.
+* If there are any sensative information required for the app to function such as emails, this is to be stored in a **.json** file and also added to the **config vars**. 
+* Add  **buildpacks** , by clicking **Add buildback** and click on **python** and click **save changes**. 
+* Add another buildback and click on **node.js** and click save changes. The order must be **Python** then **node.js**.
+*  Click on the **Deploy** section and in the deployment method click on **GitHub**.
+* Search for the **respository** to be deployed and click **connect**.
+* Scroll further down and in the automatic deploy section, click the **Enable Automatic Deploys** so that for every push from GitHub, the app is automatically updated. 
+* Finally click on **Deploy Branch** to deploy the application. 
+* Once the application is deployed, click on the **view** button to see the programme running. 
 ---
 
 ## Credits
