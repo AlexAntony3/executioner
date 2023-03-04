@@ -63,6 +63,8 @@ The logo was designed using ASCII text generator [fsymbols](https://fsymbols.com
 
 The colours used in text is as follows to add more interactivity to the website. 
 
+### Flow Charts
+
 ---
 
 ## Features
@@ -85,6 +87,22 @@ The colours used in text is as follows to add more interactivity to the website.
 
 ## Technologies used
 
+### Langugages
+
+* HTML - supplied by code instutute template
+* CSS - supplied by code instutute template
+* JavaScript - supplied by code instutute template
+* Python
+
+### Libraries
+
+* [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols")
+
+### Tools
+* [Heroku](https://www.heroku.com/ "Heroku")
+* [Git](https://git-scm.com/ "Git")
+* [GitHub](https://github.com/ "GitHub")
+* [GitPod](https://www.gitpod.io/ "GitPod")
 ---
 
 ## Testing
