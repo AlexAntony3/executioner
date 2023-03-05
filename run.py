@@ -7,13 +7,13 @@ from words import medium_words
 from words import hard_words
 
 
-def difficulty_level():
+def difficulty_level(username):
     """
     function to set difficulty level of questions
     """
-    difficulty = input('Now are you ready to challenge yourself? Pick a '
-                       'difficulty: Type E for Easy, M for Medium or H for '
-                       'Hard :')
+    difficulty = input(f'Now {username} you ready to challenge yourself? Pick '
+                       'a difficulty:\nType E for Easy, M for Medium or H for'
+                       ' Hard:\n')
     if difficulty.upper() == "E":
         word = random.choice(easy_words)
         print(word.upper())
@@ -27,4 +27,30 @@ def difficulty_level():
         raise TypeError("Sorry, you have not entered a valid difficulty")
 
 
-difficulty_level()
+def username_prompt():
+    """
+    function to allow user to enter a username
+    """
+    username = input("what would you like to be called?\n")
+    return username
+
+
+def main():
+    """
+    main function that runs all other functions
+    """
+    print("""
+        ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗████████╗██╗░█████╗░███╗░░██╗███████╗██████╗░
+        ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝██╔══██╗
+        █████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║░░░██║░░░██║██║░░██║██╔██╗██║█████╗░░██████╔╝
+        ██╔══╝░░░██╔██╗░██╔══╝░░██║░░██╗██║░░░██║░░░██║░░░██║██║░░██║██║╚████║██╔══╝░░██╔══██╗
+        ███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║███████╗██║░░██║
+        ╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
+    """)
+    print("Welcome to Executioner! A history based hangman game that has 3 "
+          "difficulties, be warned though, they are really tough. \n")
+    user = username_prompt()
+    difficulty_level(user)
+
+
+main()
