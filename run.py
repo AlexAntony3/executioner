@@ -7,23 +7,24 @@ from words import medium_words
 from words import hard_words
 
 
-class SecretWord():
+def difficulty_level():
     """
-    Obtain a random secret word from the difficulty based choice words list.
+    function to set difficulty level of questions
     """
-    def __init__(self):
+    difficulty = input('Now are you ready to challenge yourself? Pick a'
+                       'difficulty: Type E for Easy, M for Medium or H for'
+                       'Hard :')
+    if difficulty.upper() == "E":
+        word = random.choice(easy_words)
+        print(word.upper())
+    elif difficulty.upper() == "M":
+        word = random.choice(medium_words)
+        print(word.upper())
+    elif difficulty.upper() == "H":
+        word = random.choice(hard_words)
+        print(word.upper())
+    else:
+        raise TypeError("Sorry, you have not entered a valid difficulty")
 
-        difficulty = input('Now are you ready to challenge yourself? Pick a'
-                           'difficulty: Type E for Easy, M for Medium or H for'
-                           'Hard :')
-        if difficulty.upper() == "E":
-            self.word = random.choice(easy_words)
-            return word.upper()
-        elif difficulty.upper() == "M":
-            self.word = random.choice(medium_words)
-            return word.upper()
-        elif difficulty.upper() == "H":
-            self.word = random.choice(hard_words)
-            return word.upper()
-        else:
-            raise TypeError("Sorry, you have not entered a valid difficulty")
+
+difficulty_level()
