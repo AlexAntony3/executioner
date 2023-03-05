@@ -11,8 +11,8 @@ def difficulty_level():
     """
     function to set difficulty level of questions
     """
-    difficulty = input('Now are you ready to challenge yourself? Pick a'
-                       'difficulty: Type E for Easy, M for Medium or H for'
+    difficulty = input('Now are you ready to challenge yourself? Pick a '
+                       'difficulty: Type E for Easy, M for Medium or H for '
                        'Hard :')
     if difficulty.upper() == "E":
         word = random.choice(easy_words)
