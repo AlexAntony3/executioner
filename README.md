@@ -65,7 +65,7 @@ The colours used in text is as follows to add more interactivity to the website.
 
 ### Flow Charts
 
-The below flow charts show the process that is to be followed in the development of the application. The validation required at each input point is added to make sure that the game is reactive to all possible outcomes.
+The below flow charts show the process that is to be followed in the development of the application. The flow chart was created using [draw.io](https://app.diagrams.net/ "draw.io"). The validation required at each input point is added to make sure that the game is reactive to all possible outcomes. 
 
 ![Process Flow Chart](docs/screenshots/flowchart.png "Process Flow Chart")
 
@@ -103,6 +103,7 @@ The below flow charts show the process that is to be followed in the development
 * [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols")
 
 ### Tools
+* [draw.io](https://app.diagrams.net/ "draw.io")
 * [Heroku](https://www.heroku.com/ "Heroku")
 * [Git](https://git-scm.com/ "Git")
 * [GitHub](https://github.com/ "GitHub")
