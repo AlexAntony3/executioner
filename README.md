@@ -65,6 +65,10 @@ The colours used in text is as follows to add more interactivity to the website.
 
 ### Flow Charts
 
+The below flow charts show the process that is to be followed in the development of the application. The validation required at each input point is added to make sure that the game is reactive to all possible outcomes.
+
+![Process Flow Chart](docs/screenshots/flowchart.png "Process Flow Chart")
+
 ---
 
 ## Features
