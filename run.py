@@ -15,15 +15,21 @@ def difficulty_level(username):
                        "are never going to win. You can try though, so pick "
                        f"a difficulty:\n\nType E for Easy, M for Medium or H "
                        "for Hard:\n")
-    if difficulty.upper() == "E":
-        word = random.choice(easy_words)
-        print(word.upper())
-    elif difficulty.upper() == "M":
-        word = random.choice(medium_words)
-        print(word.upper())
-    elif difficulty.upper() == "H":
-        word = random.choice(hard_words)
-        print(word.upper())
+    if difficulty == "E":
+        word = random.choice(easy_words).upper()
+        hidden_word = "_" * len(word)
+        print(hidden_word)
+        print(word)
+    elif difficulty == "M":
+        word = random.choice(medium_words).upper()
+        hidden_word = "_" * len(word)
+        print(hidden_word)
+        print(word)
+    elif difficulty == "H":
+        word = random.choice(hard_words).upper()
+        hidden_word = "_" * len(word)
+        print(hidden_word)
+        print(word)
     else:
         raise TypeError("clearly, that was too many instructions for you, "
                         "enter a valid letter")
