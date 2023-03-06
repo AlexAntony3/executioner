@@ -16,15 +16,15 @@ def difficulty_level(username):
                        f"a difficulty:\n\nType E for Easy, M for Medium or H "
                        "for Hard:\n")
     if difficulty == "E":
-        word = random.choice(easy_words).upper()
+        secret_word = random.choice(easy_words).upper()
     elif difficulty == "M":
-        word = random.choice(medium_words).upper()
+        secret_word = random.choice(medium_words).upper()
     elif difficulty == "H":
-        word = random.choice(hard_words).upper()
+        secret_word = random.choice(hard_words).upper()
     else:
         raise TypeError("clearly, that was too many instructions for you, "
                         "enter a valid letter")
-    return word
+    return secret_word
 
 
 def username_prompt():
@@ -33,6 +33,21 @@ def username_prompt():
     """
     username = input("\nNow, lets get familiar, what should I call you?\n\n")
     return username
+
+
+lives_left = 6
+
+
+def guess_word(secret_word):
+    while lives_left > 0:
+        user_guess = input("What letter are you going to guess?\n")
+        
+        if user_guess in secret_word:
+            print(user_guess)
+            break
+        else:
+            print("nope")
+            break
 
 
 def draw_hangman(lives_left):
@@ -139,7 +154,8 @@ def main():
     """
     introduction()
     user = username_prompt()
-    difficulty_level(user)
+    word = difficulty_level(user)
+    guess_word(word)
 
 
 main()
