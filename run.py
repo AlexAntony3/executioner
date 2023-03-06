@@ -43,6 +43,74 @@ def username_prompt():
     return username
 
 
+def draw_hangman(lives_left):
+    if lives_left == 6:
+        print('''
+                +---+
+                |   |
+                    |
+                    |
+                    |
+                    |
+                =========''')
+    elif lives_left == 5:
+        print(
+            '''
+                +---+
+                |   |
+                O   |
+                    |
+                    |
+                    |
+                =========''')
+    elif lives_left == 4:
+        print(
+            '''
+                +---+
+                |   |
+                O   |
+                |   |
+                    |
+                    |
+                =========''')
+    elif lives_left == 3:
+        print('''
+                +---+
+                |   |
+                O   |
+               /|   |
+                    |
+                    |
+                =========''')
+    elif lives_left == 2:
+        print('''
+                +---+
+                |   |
+                O   |
+               /|\  |
+                    |
+                    |
+                =========''')
+    elif lives_left == 1:
+        print('''
+                +---+
+                |   |
+                O   |
+               /|\  |
+               /    |
+                    |
+                =========''')
+    elif lives_left == 0:
+        print('''
+                +---+
+                |   |
+                O   |
+               /|\  |
+               / \  |
+                    |
+                =========''')
+
+
 def introduction():
     """
     Function to call all aspects of the introduction function
