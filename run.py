@@ -17,22 +17,14 @@ def difficulty_level(username):
                        "for Hard:\n")
     if difficulty == "E":
         word = random.choice(easy_words).upper()
-        hidden_word = "_" * len(word)
-        print(hidden_word)
-        print(word)
     elif difficulty == "M":
         word = random.choice(medium_words).upper()
-        hidden_word = "_" * len(word)
-        print(hidden_word)
-        print(word)
     elif difficulty == "H":
         word = random.choice(hard_words).upper()
-        hidden_word = "_" * len(word)
-        print(hidden_word)
-        print(word)
     else:
         raise TypeError("clearly, that was too many instructions for you, "
                         "enter a valid letter")
+    return word
 
 
 def username_prompt():
