@@ -7,24 +7,34 @@ from words import medium_words
 from words import hard_words
 
 
-def difficulty_level(username):
+class SecretWord():
     """
-    function to set difficulty level of questions
+    Class to generate the secret word to be guessed
     """
-    difficulty = input(f"Eurgh {username}, what a disgusting name. I know you "
-                       "are never going to win. You can try though, so pick "
-                       f"a difficulty:\n\nType E for Easy, M for Medium or H "
-                       "for Hard:\n")
-    if difficulty == "E":
-        secret_word = random.choice(easy_words).upper()
-    elif difficulty == "M":
-        secret_word = random.choice(medium_words).upper()
-    elif difficulty == "H":
-        secret_word = random.choice(hard_words).upper()
-    else:
-        raise TypeError("clearly, that was too many instructions for you, "
-                        "enter a valid letter")
-    return secret_word
+    def __init__(self, random_word):
+        self.random_word = random_word
+
+    def difficulty_level(self, username):
+        """
+        function to set difficulty level of questions
+        """
+        difficulty = input(f"Eurgh {username}, what a disgusting name. I know "
+                           "you "
+                           "are never going to win. You can try though, so "
+                           "pick "
+                           f"a difficulty:\n\nType E for Easy, M for Medium or"
+                           " H "
+                           "for Hard:\n")
+        if difficulty == "E":
+            self.random_word = random.choice(easy_words).upper()
+        elif difficulty == "M":
+            self.random_word = random.choice(medium_words).upper()
+        elif difficulty == "H":
+            self.random_word = random.choice(hard_words).upper()
+        else:
+            raise TypeError("clearly, that was too many instructions for you, "
+                            "enter a valid letter")
+        print(self.random_word)
 
 
 def username_prompt():
@@ -36,18 +46,6 @@ def username_prompt():
 
 
 lives_left = 6
-
-
-def guess_word(secret_word):
-    while lives_left > 0:
-        user_guess = input("What letter are you going to guess?\n")
-        
-        if user_guess in secret_word:
-            print(user_guess)
-            break
-        else:
-            print("nope")
-            break
 
 
 def draw_hangman(lives_left):
@@ -123,19 +121,19 @@ def introduction():
     Function to call all aspects of the introduction function
     """
     print("""
-          ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗
-          ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║
-          █████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║
-          ██╔══╝░░░██╔██╗░██╔══╝░░██║░░██╗██║░░░██║
-          ███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝
-          ╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░
+        ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗
+        ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║
+        █████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║
+        ██╔══╝░░░██╔██╗░██╔══╝░░██║░░██╗██║░░░██║
+        ███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝
+        ╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░
         ████████╗██╗░█████╗░███╗░░██╗███████╗██████╗░
         ╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝██╔══██╗
         ░░░██║░░░██║██║░░██║██╔██╗██║█████╗░░██████╔╝
         ░░░██║░░░██║██║░░██║██║╚████║██╔══╝░░██╔══██╗
         ░░░██║░░░██║╚█████╔╝██║░╚███║███████╗██║░░██║
         ░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
-          """)
+        """)
     print("Welcome to Executioner! A history based hangman game that has 3 "
           "difficulties, be warned though, they are really tough. \n")
     print("Here are the instructions:\n"
@@ -154,8 +152,8 @@ def main():
     """
     introduction()
     user = username_prompt()
-    word = difficulty_level(user)
-    guess_word(word)
+    secret_word = SecretWord("random_word")
+    secret_word.difficulty_level(user)
 
 
 main()
