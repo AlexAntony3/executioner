@@ -34,7 +34,24 @@ class SecretWord():
         else:
             raise TypeError("clearly, that was too many instructions for you, "
                             "enter a valid letter")
-        print(self.random_word)
+
+        word = self.random_word
+        print(word)
+        underscore_word = ['_' for letter in word]
+        print(underscore_word)
+
+
+lives_left = 6
+
+# while lives_left > 0:
+
+#     user_guess = input("I know the word, and I know you won't get it, guess
+#  a "
+#                        "letter:")
+
+#     if user_guess in SecretWord.word:
+#         print("hmm, okay that was correct, probably just pure luck.")
+#         print(f'{user_guess}', end="")
 
 
 def username_prompt():
@@ -43,9 +60,6 @@ def username_prompt():
     """
     username = input("\nNow, lets get familiar, what should I call you?\n\n")
     return username
-
-
-lives_left = 6
 
 
 def draw_hangman(lives_left):
@@ -152,8 +166,8 @@ def main():
     """
     introduction()
     user = username_prompt()
-    secret_word = SecretWord("random_word")
-    secret_word.difficulty_level(user)
+    word = SecretWord("random_word")
+    word.difficulty_level(user)
 
 
 main()
