@@ -127,14 +127,14 @@ def username_prompt():
     """
     username = input("\nNow, lets get familiar, what should I call you?\n")
 
-    return username
+    print(f'Eurgh! {username}, what a disgusting name')
 
 
-def difficulty_level(username):
+def difficulty_level():
     """
     function to set difficulty level of questions
     """
-    difficulty = input(f"Eurgh, {username} what a disgusting name. I know "
+    difficulty = input(" I know "
                        "you "
                        "are never going to win. You can try though, so "
                        "pick "
@@ -151,7 +151,26 @@ def difficulty_level(username):
         raise TypeError("clearly, that was too many instructions for you, "
                         "enter a valid letter")
 
-    print(random_word)
+    return random_word
+
+
+# Pre-requisites
+
+correct_letters = []
+incorrect_letters = []
+lives_left = 6
+secret_word = difficulty_level()
+
+while lives_left > 0:
+
+    user_guess = input("\nGo on, guess a letter: ")
+
+    for letter in secret_word:
+        if letter in secret_word:
+            print(letter, end="")
+        else:
+            print("_", end="")
+            lives_left -= 1
 
 
 def main():
@@ -159,8 +178,8 @@ def main():
     main function that runs all other functions
     """
     introduction()
-    user = username_prompt()
-    difficulty_level(user)
+    username_prompt()
+    difficulty_level()
 
 
 main()
