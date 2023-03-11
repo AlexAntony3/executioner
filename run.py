@@ -155,31 +155,48 @@ def difficulty_level():
 
 
 # Pre-requisites
+def play_game(random_word):
 
-correct_letters = []
-incorrect_letters = []
-lives_left = 6
-secret_word = difficulty_level()
+    correct_letters = []
+    incorrect_letters = []
+    lives_left = 6
+    secret_word = ["_" * len(random_word)]
+    guessed = False
 
-while lives_left > 0:
+    introduction()
+    username_prompt()
 
-    user_guess = input("\nGo on, guess a letter: ")
+    while guessed and lives_left > 0:
 
-    for letter in secret_word:
-        if letter in secret_word:
-            print(letter, end="")
-        else:
-            print("_", end="")
-            lives_left -= 1
+        user_guess = input("\nGo on, guess a letter: ").upper()
+
+        if len(user_guess) == 1 and user_guess.isalpha():
+            if user_guess in correct_letters or incorrect_letters:
+                print("\nThe instructions were at the start of the game..."
+                      " you already guessed that letter, try again \n")
+            elif user_guess in random_word:
+                print(f"\nLucky guess, {user_guess} is in the secret word.\n")
+                correct_letters.append(user_guess)
+                for i, letter in enumerate(random_word):
+                    if user_guess == letter:
+                        secret_word[i] = user_guess
+                    secret_word[i] = "".join(secret_word)
+                if '_' not in secret_word:
+                    print("... I didn't expect that to happen, you're not as "
+                          "dumb as you look. Well done.")
+                    break
+            else:
+                print("\n Putdown. ")
+                lives_left -= 1
+                incorrect_letters.append(user_guess)
+
+        break
 
 
 def main():
     """
     main function that runs all other functions
     """
-    introduction()
-    username_prompt()
-    difficulty_level()
 
 
 main()
