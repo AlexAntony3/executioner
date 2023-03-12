@@ -162,7 +162,10 @@ def play_game(random_word):
     secret_word = "_" * len(random_word)
     guessed = False
 
+    introduction()
     username_prompt()
+    draw_hangman(lives_left)
+    print(secret_word)
 
     while guessed is False and lives_left > 0:
 
@@ -188,6 +191,7 @@ def play_game(random_word):
                 lives_left -= 1
                 letters_guessed.append(user_guess)
 
+            draw_hangman(lives_left)
             print(secret_word)
 
     if guessed:
