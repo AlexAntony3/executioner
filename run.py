@@ -193,6 +193,9 @@ def play_game(random_word):
 
             draw_hangman(lives_left)
             print(secret_word)
+        else:
+            print("\nThe instructions must've been too hard to follow... "
+                  "guess one valid alphabetical character.\n")
 
     if guessed:
         print("... I didn't expect that to happen, you're not as "
