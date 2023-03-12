@@ -151,52 +151,59 @@ def difficulty_level():
         raise TypeError("clearly, that was too many instructions for you, "
                         "enter a valid letter")
 
-    return random_word
+    return random_word.upper()
 
 
 # Pre-requisites
 def play_game(random_word):
 
-    correct_letters = []
-    incorrect_letters = []
+    letters_guessed = []
     lives_left = 6
-    secret_word = ["_" * len(random_word)]
+    secret_word = "_" * len(random_word)
     guessed = False
 
-    introduction()
     username_prompt()
 
-    while guessed and lives_left > 0:
+    while guessed is False and lives_left > 0:
 
         user_guess = input("\nGo on, guess a letter: ").upper()
 
         if len(user_guess) == 1 and user_guess.isalpha():
-            if user_guess in correct_letters or incorrect_letters:
+            if user_guess in letters_guessed:
                 print("\nThe instructions were at the start of the game..."
                       " you already guessed that letter, try again \n")
             elif user_guess in random_word:
                 print(f"\nLucky guess, {user_guess} is in the secret word.\n")
-                correct_letters.append(user_guess)
-                for i, letter in enumerate(random_word):
-                    if user_guess == letter:
-                        secret_word[i] = user_guess
-                    secret_word[i] = "".join(secret_word)
+                letters_guessed.append(user_guess)
+                secret_word_list = list(secret_word)
+                indexed_list = [i for i, letter in enumerate(random_word) if
+                                letter == user_guess]
+                for index in indexed_list:
+                    secret_word_list[index] = user_guess
+                secret_word = "".join(secret_word_list)
                 if '_' not in secret_word:
-                    print("... I didn't expect that to happen, you're not as "
-                          "dumb as you look. Well done.")
-                    break
+                    guessed = True
             else:
                 print("\n Putdown. ")
                 lives_left -= 1
-                incorrect_letters.append(user_guess)
+                letters_guessed.append(user_guess)
 
-        break
+            print(secret_word)
+
+    if guessed:
+        print("... I didn't expect that to happen, you're not as "
+              "dumb as you look. Well done.")
+    else:
+        print("I told you it was hard. HAHAHA the correct word was: "
+              f"{random_word} ")
 
 
 def main():
     """
     main function that runs all other functions
     """
+    word = difficulty_level()
+    play_game(word)
 
 
 main()
