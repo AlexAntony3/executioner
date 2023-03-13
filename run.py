@@ -5,6 +5,7 @@ import random
 from words import easy_words
 from words import medium_words
 from words import hard_words
+from src.artwork import draw_hangman
 
 # while lives_left > 0:
 
@@ -15,74 +16,6 @@ from words import hard_words
 #     if user_guess in SecretWord.word:
 #         print("hmm, okay that was correct, probably just pure luck.")
 #         print(f'{user_guess}', end="")
-
-
-def draw_hangman(lives_left):
-    if lives_left == 6:
-        print('''
-                +---+
-                |   |
-                    |
-                    |
-                    |
-                    |
-                =========''')
-    elif lives_left == 5:
-        print(
-            '''
-                +---+
-                |   |
-                O   |
-                    |
-                    |
-                    |
-                =========''')
-    elif lives_left == 4:
-        print(
-            '''
-                +---+
-                |   |
-                O   |
-                |   |
-                    |
-                    |
-                =========''')
-    elif lives_left == 3:
-        print('''
-                +---+
-                |   |
-                O   |
-               /|   |
-                    |
-                    |
-                =========''')
-    elif lives_left == 2:
-        print('''
-                +---+
-                |   |
-                O   |
-               /|\  |
-                    |
-                    |
-                =========''')
-    elif lives_left == 1:
-        print('''
-                +---+
-                |   |
-                O   |
-               /|\  |
-               /    |
-                    |
-                =========''')
-    elif lives_left == 0:
-        print('''
-                +---+
-                |   |
-                O   |
-               /|\  |
-               / \  |
-                    |
-                =========''')
 
 
 def introduction():
