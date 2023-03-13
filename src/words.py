@@ -1,3 +1,6 @@
+"""
+File for words used in the game depending on difficulty
+"""
 easy_words = ('axe bow king war bell gun mask hang die '
               'past earl lord guts rat poor rich kill '
               'debt dire time duma pope jail gold rich ').split()

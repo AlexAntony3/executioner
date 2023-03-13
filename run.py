@@ -1,21 +1,12 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+"""
+file that runs the entire game
+"""
+
 import random
-from words import easy_words
-from words import medium_words
-from words import hard_words
+from src.words import easy_words
+from src.words import medium_words
+from src.words import hard_words
 from src.artwork import draw_hangman
-
-# while lives_left > 0:
-
-#     user_guess = input("I know the word, and I know you won't get it, guess
-#  a "
-#                        "letter:")
-
-#     if user_guess in SecretWord.word:
-#         print("hmm, okay that was correct, probably just pure luck.")
-#         print(f'{user_guess}', end="")
 
 
 def introduction():
