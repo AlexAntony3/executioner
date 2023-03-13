@@ -2,32 +2,15 @@
 file that runs the entire game
 """
 
-import random
-from src.words import easy_words
-from src.words import medium_words
-from src.words import hard_words
+from src.words import difficulty_level
 from src.artwork import draw_hangman
+from src.artwork import intro_logo
 
 
-def introduction():
+def rules():
     """
-    Function to call all aspects of the introduction function
+    Function to print the rules of the game
     """
-    print("""
-        ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗
-        ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║
-        █████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║
-        ██╔══╝░░░██╔██╗░██╔══╝░░██║░░██╗██║░░░██║
-        ███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝
-        ╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░
-        ████████╗██╗░█████╗░███╗░░██╗███████╗██████╗░
-        ╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝██╔══██╗
-        ░░░██║░░░██║██║░░██║██╔██╗██║█████╗░░██████╔╝
-        ░░░██║░░░██║██║░░██║██║╚████║██╔══╝░░██╔══██╗
-        ░░░██║░░░██║╚█████╔╝██║░╚███║███████╗██║░░██║
-        ░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
-        """)
-
     print("Welcome to Executioner! A history based hangman game that "
           "has 3 "
           "difficulties, be warned though, they are really tough. \n"
@@ -54,30 +37,6 @@ def username_prompt():
     print(f'Eurgh! {username}, what a disgusting name')
 
 
-def difficulty_level():
-    """
-    function to set difficulty level of questions
-    """
-    difficulty = input(" I know "
-                       "you "
-                       "are never going to win. You can try though, so "
-                       "pick "
-                       "a difficulty:\n\nType E for Easy, M for Medium or"
-                       " H "
-                       "for Hard:\n")
-    if difficulty == "E":
-        random_word = random.choice(easy_words).upper()
-    elif difficulty == "M":
-        random_word = random.choice(medium_words).upper()
-    elif difficulty == "H":
-        random_word = random.choice(hard_words).upper()
-    else:
-        raise TypeError("clearly, that was too many instructions for you, "
-                        "enter a valid letter")
-
-    return random_word.upper()
-
-
 # Pre-requisites
 def play_game(random_word):
 
@@ -86,7 +45,8 @@ def play_game(random_word):
     secret_word = "_" * len(random_word)
     guessed = False
 
-    introduction()
+    intro_logo()
+    rules()
     username_prompt()
     draw_hangman(lives_left)
     print(secret_word)
