@@ -27,14 +27,14 @@ def difficulty_level():
                        "a difficulty:\n\nType E for Easy, M for Medium or"
                        " H "
                        "for Hard:\n")
-    if difficulty == "E":
+    if difficulty.upper() == "E":
         random_word = random.choice(easy_words).upper()
-    elif difficulty == "M":
+    elif difficulty.upper() == "M":
         random_word = random.choice(medium_words).upper()
-    elif difficulty == "H":
+    elif difficulty.upper() == "H":
         random_word = random.choice(hard_words).upper()
     else:
-        raise TypeError("clearly, that was too many instructions for you, "
-                        "enter a valid letter")
+        print("clearly, that was too many instructions for you, "
+              "enter a valid letter")
 
     return random_word.upper()
