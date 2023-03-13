@@ -2,9 +2,9 @@
 file that runs the entire game
 """
 
-from src.words import difficulty_level
-from src.artwork import draw_hangman
-from src.artwork import intro_logo
+from game.words import difficulty_level
+from game.artwork import draw_hangman
+from game.artwork import intro_logo
 
 
 def rules():
@@ -39,6 +39,12 @@ def username_prompt():
 
 # Pre-requisites
 def play_game(random_word):
+    """
+    Function to use pre-requisite variables to play the game, this includes
+    converting the random word into underscores checking if the letter
+    entered is within the word and also draw the hangman according to 
+    lives lost. 
+    """
 
     letters_guessed = []
     lives_left = 6
