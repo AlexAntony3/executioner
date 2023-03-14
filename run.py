@@ -112,9 +112,9 @@ def play_again():
             break
         if replay == "Y":
             retry = True
-            word = difficulty_level()
-            play_game(word)
-        print("Simple instructions, Y or N...")
+            main()
+        else:
+            print("Simple instructions, Y or N...")
 
 
 def main():
