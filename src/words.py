@@ -20,21 +20,26 @@ def difficulty_level():
     """
     function to set difficulty level of questions
     """
-    difficulty = input(" I know "
-                       "you "
-                       "are never going to win. You can try though, so "
-                       "pick "
-                       "a difficulty:\n\nType E for Easy, M for Medium or"
-                       " H "
-                       "for Hard:\n")
-    if difficulty.upper() == "E":
-        random_word = random.choice(easy_words).upper()
-    elif difficulty.upper() == "M":
-        random_word = random.choice(medium_words).upper()
-    elif difficulty.upper() == "H":
-        random_word = random.choice(hard_words).upper()
-    else:
+    choice = False
+    while not choice:
+        difficulty = input(" I know "
+                           "you "
+                           "are never going to win. You can try though, so "
+                           "pick "
+                           "a difficulty:\n\nType E for Easy, M for Medium or"
+                           " H "
+                           "for Hard:\n")
+        if difficulty.upper() == "E":
+            random_word = random.choice(easy_words).upper()
+            choice = True
+            return random_word.upper()
+        if difficulty.upper() == "M":
+            random_word = random.choice(medium_words).upper()
+            choice = True
+            return random_word.upper()
+        if difficulty.upper() == "H":
+            random_word = random.choice(hard_words).upper()
+            choice = True
+            return random_word.upper()
         print("clearly, that was too many instructions for you, "
               "enter a valid letter")
-
-    return random_word.upper()
