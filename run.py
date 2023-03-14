@@ -105,6 +105,7 @@ def play_again():
             break
         if replay == "Y":
             retry = True
+            clear_screen()
             main()
         else:
             print("\nSimple instructions, Y or N...\n")
