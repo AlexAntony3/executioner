@@ -2,6 +2,7 @@
 File for words used in the game depending on difficulty
 """
 import random
+import os
 
 easy_words = ('axe bow king war bell gun mask hang die '
               'past earl lord guts rat poor rich kill '
@@ -16,6 +17,13 @@ hard_words = ('guillotine casualties protection liberation '
               'revolution archaeology almanac etymology numeral ').split()
 
 
+def clear_screen():
+    """
+    Function to clear the screen using imported os.
+    """
+    os.system("clear")
+
+
 def difficulty_level():
     """
     function to set difficulty level of questions
@@ -28,14 +36,17 @@ def difficulty_level():
         if difficulty.upper() == "E":
             random_word = random.choice(easy_words).upper()
             choice = True
+            clear_screen()
             return random_word.upper()
         if difficulty.upper() == "M":
             random_word = random.choice(medium_words).upper()
             choice = True
+            clear_screen()
             return random_word.upper()
         if difficulty.upper() == "H":
             random_word = random.choice(hard_words).upper()
             choice = True
+            clear_screen()
             return random_word.upper()
         print("clearly, that was too many instructions for you, "
               "enter a valid letter")

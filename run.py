@@ -1,16 +1,9 @@
 """
 file that runs the entire game
 """
-import os
-from src.words import difficulty_level
+
+from src.words import clear_screen, difficulty_level
 from src.artwork import intro_logo, draw_hangman
-
-
-def clear_screen():
-    """
-    Function to clear the screen using imported os.
-    """
-    os.system("clear")
 
 
 def rules():
