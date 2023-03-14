@@ -94,17 +94,18 @@ def play_again():
     """
     Function to allow user the option to play again once game is completed.
     """
-    replay = input("Do you want another try? Y/N :").upper()
+    retry = False
+    while retry is not True:
+        replay = input("Do you want another try? Y/N :").upper()
 
-    if replay == "N":
-        print("goodbye")
-    elif replay == "Y":
-        word = difficulty_level()
-        play_game(word)
-        play_again()
-    else:
+        if replay == "N":
+            print("goodbye")
+            break
+        if replay == "Y":
+            retry = True
+            word = difficulty_level()
+            play_game(word)
         print("Simple instructions, Y or N...")
-        play_again()
 
 
 def main():
