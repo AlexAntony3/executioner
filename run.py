@@ -51,9 +51,6 @@ def play_game(random_word):
     secret_word = "_" * len(random_word)
     guessed = False
 
-    intro_logo()
-    rules()
-    username_prompt()
     draw_hangman(lives_left)
     print(secret_word)
 
@@ -95,12 +92,33 @@ def play_game(random_word):
               f"{random_word} ")
 
 
+def play_again():
+    """
+    Function to allow user the option to play again once game is completed.
+    """
+    replay = input("Do you want another try? Y/N :").upper()
+
+    if replay == "N":
+        print("goodbye")
+    elif replay == "Y":
+        word = difficulty_level()
+        play_game(word)
+        play_again()
+    else:
+        print("Simple instructions, Y or N...")
+        play_again()
+
+
 def main():
     """
     main function that runs all other functions
     """
+    intro_logo()
+    rules()
+    username_prompt()
     word = difficulty_level()
     play_game(word)
+    play_again()
 
 
 main()
