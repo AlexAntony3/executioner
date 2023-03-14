@@ -1,9 +1,16 @@
 """
 file that runs the entire game
 """
-
+import os
 from src.words import difficulty_level
 from src.artwork import intro_logo, draw_hangman
+
+
+def clear_screen():
+    """
+    Function to clear the screen using imported os.
+    """
+    os.system("clear")
 
 
 def rules():
@@ -61,6 +68,7 @@ def play_game(random_word):
                 print("\nThe instructions were at the start of the game..."
                       " you already guessed that letter, try again \n")
             elif user_guess in random_word:
+                clear_screen()
                 print(f"\nLucky guess, {user_guess} is in the secret word.\n")
                 letters_guessed.append(user_guess)
                 secret_word_list = list(secret_word)
@@ -72,6 +80,7 @@ def play_game(random_word):
                 if '_' not in secret_word:
                     guessed = True
             else:
+                clear_screen()
                 print("\n Putdown. ")
                 lives_left -= 1
                 letters_guessed.append(user_guess)
