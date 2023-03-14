@@ -30,7 +30,7 @@ def difficulty_level():
     """
     choice = False
     while not choice:
-        difficulty = input("I know you are never going to win. You can try"
+        difficulty = input("I know you are never going to win. You can try "
                            "though, so pick a difficulty:\n\nType E for Easy, "
                            "M for Medium or H for Hard:\n")
         if difficulty.upper() == "E":

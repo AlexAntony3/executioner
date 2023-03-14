@@ -42,7 +42,7 @@ def play_game(random_word):
 
     letters_guessed = []
     lives_left = 6
-    secret_word = "_" * len(random_word)
+    secret_word = " _ " * len(random_word)
     guessed = False
 
     draw_hangman(lives_left)
