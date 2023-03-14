@@ -4,6 +4,23 @@ File for words used in the game depending on difficulty
 import random
 import os
 
+
+def pick_putdown():
+    """
+    A list of putdowns to be used when user answers incorrectly
+    """
+    putdowns = ["Another one bites the dust",
+                "You're really bad at this",
+                "I could do better with my eyes closed",
+                "This is a true tragedy",
+                "You Suck!",
+                "Why would you even guess that letter?",
+                "Maybe I should make an extra easy version for you"]
+
+    putdown = random.choice(putdowns)
+    return putdown
+
+
 easy_words = ('axe bow king war bell gun mask hang die '
               'past earl lord guts rat poor rich kill '
               'debt dire time duma pope jail gold rich ').split()

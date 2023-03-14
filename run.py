@@ -2,7 +2,7 @@
 file that runs the entire game
 """
 
-from src.words import clear_screen, difficulty_level
+from src.words import clear_screen, difficulty_level, pick_putdown
 from src.artwork import intro_logo, draw_hangman, winner_logo, loser
 
 
@@ -71,7 +71,7 @@ def play_game(random_word):
                     guessed = True
             else:
                 clear_screen()
-                print("\n Putdown. ")
+                print(pick_putdown())
                 lives_left -= 1
                 letters_guessed.append(user_guess)
 
