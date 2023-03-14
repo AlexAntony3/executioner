@@ -3,7 +3,7 @@ file that runs the entire game
 """
 
 from src.words import clear_screen, difficulty_level
-from src.artwork import intro_logo, draw_hangman
+from src.artwork import intro_logo, draw_hangman, winner_logo, loser
 
 
 def rules():
@@ -29,7 +29,7 @@ def username_prompt():
     """
     username = input("\nNow, lets get familiar, what should I call you?\n")
 
-    print(f'Eurgh! {username}, what a disgusting name')
+    print(f'\nEurgh! {username}, what a disgusting name\n')
 
 
 def play_game(random_word):
@@ -42,11 +42,12 @@ def play_game(random_word):
 
     letters_guessed = []
     lives_left = 6
-    secret_word = " _ " * len(random_word)
+    secret_word = "_" * len(random_word)
     guessed = False
 
     draw_hangman(lives_left)
-    print(secret_word)
+    print(f'\nThe Secret Word is : {secret_word}\n')
+    print(f'\nYou have {lives_left} lives left.\n')
 
     while guessed is False and lives_left > 0:
 
@@ -75,17 +76,20 @@ def play_game(random_word):
                 letters_guessed.append(user_guess)
 
             draw_hangman(lives_left)
-            print(secret_word)
+            print(f'\nThe Secret Word is : {secret_word}\n')
+            print(f'\nYou have {lives_left} lives left.\n')
         else:
             print("\nThe instructions must've been too hard to follow... "
                   "guess one valid alphabetical character.\n")
 
     if guessed:
-        print("... I didn't expect that to happen, you're not as "
-              "dumb as you look. Well done.")
+        print("\n... I didn't expect that to happen, you're not as "
+              "dumb as you look. Well done.\n")
+        winner_logo()
     else:
-        print("I told you it was hard. HAHAHA the correct word was: "
-              f"{random_word} ")
+        print("\nI told you it was hard. HAHAHA the correct word was: "
+              f"{random_word}\n")
+        loser()
 
 
 def play_again():
@@ -94,7 +98,7 @@ def play_again():
     """
     retry = False
     while retry is not True:
-        replay = input("Do you want another try? Y/N :").upper()
+        replay = input("\nDo you want another try? Y/N :").upper()
 
         if replay == "N":
             print("goodbye")
@@ -103,7 +107,7 @@ def play_again():
             retry = True
             main()
         else:
-            print("Simple instructions, Y or N...")
+            print("\nSimple instructions, Y or N...\n")
 
 
 def main():
