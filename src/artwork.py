@@ -13,7 +13,7 @@ def fast_typing(content):
     for char in content:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.01)
+        time.sleep(0.005)
 
 
 def slow_typing(content):
