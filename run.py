@@ -4,7 +4,7 @@ file that runs the entire game
 
 from src.words import clear_screen, difficulty_level, pick_putdown
 from src.artwork import intro_logo, draw_hangman, winner_logo, loser, \
-    slow_typing
+    slow_typing, input_typing
 
 
 def username_prompt():
@@ -12,7 +12,8 @@ def username_prompt():
     function to allow user to enter a username
     """
     while True:
-        username = input("\nNow, lets get familiar, what should I call you?\n")
+        username = input_typing("\nNow, lets get familiar, what should I call "
+                                "you?\n")
         if username.isalpha() and len(username) >= 1:
             print(f'\nEurgh! {username}, what a disgusting name\n')
             rules()
@@ -60,7 +61,7 @@ def play_game(random_word):
 
     while guessed is False and lives_left > 0:
 
-        user_guess = input("\nGo on, guess a letter: ").upper()
+        user_guess = input_typing("\nGo on, guess a letter: ").upper()
 
         if len(user_guess) == 1 and user_guess.isalpha():
             if user_guess in letters_guessed:

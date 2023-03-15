@@ -27,6 +27,19 @@ def slow_typing(content):
         time.sleep(0.03)
 
 
+def input_typing(content):
+    """
+    Function designed to print contents in typewriter format
+    in a slow method.
+    """
+    for char in content:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.03)
+    value = input()
+    return value
+
+
 def draw_hangman(lives_left):
     """
     Function to draw progressing hangman figure according to lives lost.
