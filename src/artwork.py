@@ -1,6 +1,30 @@
 """
     file for artwork that's used in the hangman game.
 """
+import time
+import sys
+
+
+def fast_typing(content):
+    """
+    Function designed to print contents in typewriter format
+    in a fast method.
+    """
+    for char in content:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.01)
+
+
+def slow_typing(content):
+    """
+    Function designed to print contents in typewriter format
+    in a slow method.
+    """
+    for char in content:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.03)
 
 
 def draw_hangman(lives_left):
@@ -78,7 +102,7 @@ def intro_logo():
     """
     Function to call the introduction logo
     """
-    print("""
+    fast_typing("""
         ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗
         ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║
         █████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║

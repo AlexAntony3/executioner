@@ -3,7 +3,8 @@ file that runs the entire game
 """
 
 from src.words import clear_screen, difficulty_level, pick_putdown
-from src.artwork import intro_logo, draw_hangman, winner_logo, loser
+from src.artwork import intro_logo, draw_hangman, winner_logo, loser, \
+    slow_typing
 
 
 def username_prompt():
@@ -23,17 +24,19 @@ def rules():
     """
     Function to print the rules of the game
     """
-    print("Welcome to Executioner!\nA history based hangman game that "
-          "has 3 difficulties, be warned though,\nthey are really tough. \n"
-          "\nHere are the instructions:\n"
-          "1. Pick the difficulty you would like\n"
-          "2. You are given 6 lives before the man is hanged\n"
-          "3. Guess a letter, if it replaces an _ then you guessed "
-          "right!\n"
-          "4. However, if you guess incorrectly, you lose a life and "
-          "\nthe man is prepared to be hanged\n"
-          "5. If you guess incorrectly 6 times then the man is EXECUTED!\n"
-          )
+    slow_typing("Welcome to Executioner!\nA history based hangman game that "
+                "has 3 difficulties, be warned though,\nthey are really tough."
+                "\n"
+                "\nHere are the instructions:\n"
+                "1. Pick the difficulty you would like\n"
+                "2. You are given 6 lives before the man is hanged\n"
+                "3. Guess a letter, if it replaces an _ then you guessed "
+                "right!\n"
+                "4. However, if you guess incorrectly, you lose a life and "
+                "\nthe man is prepared to be hanged\n"
+                "5. If you guess incorrectly 6 times then the man is EXECUTED!"
+                "\n"
+                )
     word = difficulty_level()
     play_game(word)
 
