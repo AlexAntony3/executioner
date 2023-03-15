@@ -6,6 +6,19 @@ from src.words import clear_screen, difficulty_level, pick_putdown
 from src.artwork import intro_logo, draw_hangman, winner_logo, loser
 
 
+def username_prompt():
+    """
+    function to allow user to enter a username
+    """
+    while True:
+        username = input("\nNow, lets get familiar, what should I call you?\n")
+        if username.isalpha() and len(username) >= 1:
+            print(f'\nEurgh! {username}, what a disgusting name\n')
+            rules()
+            break
+        print("\nYour name must contains letters only and atleast 1 character")
+
+
 def rules():
     """
     Function to print the rules of the game
@@ -21,15 +34,8 @@ def rules():
           "\nthe man is prepared to be hanged\n"
           "5. If you guess incorrectly 6 times then the man is EXECUTED!\n"
           )
-
-
-def username_prompt():
-    """
-    function to allow user to enter a username
-    """
-    username = input("\nNow, lets get familiar, what should I call you?\n")
-
-    print(f'\nEurgh! {username}, what a disgusting name\n')
+    word = difficulty_level()
+    play_game(word)
 
 
 def play_game(random_word):
@@ -117,9 +123,6 @@ def main():
     """
     intro_logo()
     username_prompt()
-    rules()
-    word = difficulty_level()
-    play_game(word)
     play_again()
 
 
