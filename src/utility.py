@@ -15,7 +15,7 @@ def clear_screen():
     os.system("clear")
 
 
-def fast_typing(content):
+def typing(content, speed):
     """
     Function designed to print contents in typewriter format
     in a fast method.
@@ -23,18 +23,10 @@ def fast_typing(content):
     for char in content:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.005)
-
-
-def slow_typing(content):
-    """
-    Function designed to print contents in typewriter format
-    in a slow method.
-    """
-    for char in content:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+        if speed == "fast":
+            time.sleep(0.005)
+        else:
+            time.sleep(0.03)
 
 
 def input_typing(content):
@@ -141,7 +133,7 @@ def intro_logo():
     """
     Function to call the introduction logo
     """
-    fast_typing("""
+    typing("""
         ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗
         ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║
         █████╗░░░╚███╔╝░█████╗░░██║░░╚═╝██║░░░██║
@@ -154,7 +146,7 @@ def intro_logo():
         ░░░██║░░░██║██║░░██║██║╚████║██╔══╝░░██╔══██╗
         ░░░██║░░░██║╚█████╔╝██║░╚███║███████╗██║░░██║
         ░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
-        """)
+        """, "fast")
 
 
 def winner_logo():
