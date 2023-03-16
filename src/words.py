@@ -3,7 +3,7 @@ File for words used in the game depending on difficulty
 """
 import random
 import os
-from artwork import input_typing
+from .artwork import input_typing
 
 
 def pick_putdown():
