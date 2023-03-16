@@ -2,24 +2,7 @@
 File for words used in the game depending on difficulty
 """
 import random
-import os
-from .artwork import input_typing
-
-
-def pick_putdown():
-    """
-    A list of putdowns to be used when user answers incorrectly
-    """
-    putdowns = ["Another one bites the dust",
-                "You're really bad at this",
-                "I could do better with my eyes closed",
-                "This is a true tragedy",
-                "You Suck!",
-                "Why would you even guess that letter?",
-                "Maybe I should make an extra easy version for you"]
-
-    putdown = random.choice(putdowns)
-    return putdown
+from .utility import input_typing, clear_screen
 
 
 easy_words = ('axe bow king war bell gun mask hang die '
@@ -33,13 +16,6 @@ medium_words = ('albion prince queen helots liberty Nobel '
 hard_words = ('guillotine casualties protection liberation '
               'scimitar weapon behead hanged torture execute '
               'revolution archaeology almanac etymology numeral ').split()
-
-
-def clear_screen():
-    """
-    Function to clear the screen using imported os.
-    """
-    os.system("clear")
 
 
 def difficulty_level():

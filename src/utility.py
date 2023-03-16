@@ -1,8 +1,18 @@
 """
-    file for artwork that's used in the hangman game.
+    The functions on this file help to form all 
+    graphical aspects and effects of the game.
 """
 import time
 import sys
+import os
+import random
+
+
+def clear_screen():
+    """
+    Function to clear the screen using imported os.
+    """
+    os.system("clear")
 
 
 def fast_typing(content):
@@ -38,6 +48,22 @@ def input_typing(content):
         time.sleep(0.03)
     value = input()
     return value
+
+
+def pick_putdown():
+    """
+    A list of putdowns to be used when user answers incorrectly
+    """
+    putdowns = ["Another one bites the dust",
+                "You're really bad at this",
+                "I could do better with my eyes closed",
+                "This is a true tragedy",
+                "You Suck!",
+                "Why would you even guess that letter?",
+                "Maybe I should make an extra easy version for you"]
+
+    putdown = random.choice(putdowns)
+    return putdown
 
 
 def draw_hangman(lives_left):
