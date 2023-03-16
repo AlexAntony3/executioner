@@ -56,37 +56,41 @@ def play_game(random_word):
     print(f'\nYou have {lives_left} lives left.\n')
 
     while guessed is False and lives_left > 0:
+        try:
+            user_guess = input_typing("\nGo on, guess a letter: ").upper()
 
-        user_guess = input_typing("\nGo on, guess a letter: ").upper()
+            if len(user_guess) == 1 and user_guess.isalpha():
+                if user_guess in letters_guessed:
+                    raise ValueError("\nThe instructions were at the start of "
+                                     "the game...you already guessed that "
+                                     "letter, try again \n")
+                if user_guess in random_word:
+                    clear_screen()
+                    print(f"\nLucky guess, {user_guess} is in the secret "
+                          "word.\n")
+                    letters_guessed.append(user_guess)
+                    secret_word_list = list(secret_word)
+                    indexed_list = [i for i, letter in enumerate(random_word)
+                                    if letter == user_guess]
+                    for index in indexed_list:
+                        secret_word_list[index] = user_guess
+                    secret_word = "".join(secret_word_list)
+                    if '_' not in secret_word:
+                        guessed = True
+                else:
+                    clear_screen()
+                    print(pick_putdown())
+                    lives_left -= 1
+                    letters_guessed.append(user_guess)
 
-        if len(user_guess) == 1 and user_guess.isalpha():
-            if user_guess in letters_guessed:
-                print("\nThe instructions were at the start of the game..."
-                      " you already guessed that letter, try again \n")
-            elif user_guess in random_word:
-                clear_screen()
-                print(f"\nLucky guess, {user_guess} is in the secret word.\n")
-                letters_guessed.append(user_guess)
-                secret_word_list = list(secret_word)
-                indexed_list = [i for i, letter in enumerate(random_word) if
-                                letter == user_guess]
-                for index in indexed_list:
-                    secret_word_list[index] = user_guess
-                secret_word = "".join(secret_word_list)
-                if '_' not in secret_word:
-                    guessed = True
+                draw_hangman(lives_left)
+                print(f'\nThe Secret Word is : {secret_word}\n')
+                print(f'\nYou have {lives_left} lives left.\n')
             else:
-                clear_screen()
-                print(pick_putdown())
-                lives_left -= 1
-                letters_guessed.append(user_guess)
-
-            draw_hangman(lives_left)
-            print(f'\nThe Secret Word is : {secret_word}\n')
-            print(f'\nYou have {lives_left} lives left.\n')
-        else:
-            print("\nThe instructions must've been too hard to follow... "
-                  "guess one valid alphabetical character.\n")
+                print("\nThe instructions must've been too hard to follow... "
+                      "guess one valid alphabetical character.\n")
+        except ValueError as e:
+            print(e)
 
     if guessed:
         print("\n... I didn't expect that to happen, you're not as "
