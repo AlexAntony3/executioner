@@ -1,5 +1,5 @@
 """
-    The functions on this file help to form all 
+    The functions on this file help to form all
     graphical aspects and effects of the game.
 """
 import time
@@ -113,7 +113,7 @@ def draw_hangman(lives_left):
                 +---+
                 |   |
                 O   |
-               /|\  |
+               /|\\ |
                     |
                     |
                 =========''')
@@ -122,7 +122,7 @@ def draw_hangman(lives_left):
                 +---+
                 |   |
                 O   |
-               /|\  |
+               /|\\ |
                /    |
                     |
                 =========''')
@@ -131,8 +131,8 @@ def draw_hangman(lives_left):
                 +---+
                 |   |
                 O   |
-               /|\  |
-               / \  |
+               /|\\ |
+               / \\ |
                     |
                 =========''')
 
