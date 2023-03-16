@@ -3,6 +3,27 @@ from .utility import input_typing, draw_hangman, clear_screen, \
 from .words import difficulty_level
 
 
+def rules_prompt():
+    """
+    Offers user an opportunity to pick if they would like to 
+    read the instructions or not at the start of the game
+    """
+    while True:
+        try:
+            prompt = input_typing("\n Do you want to read the "
+                                  "instructions? Y/N?").upper()
+            if prompt not in ("Y", "N"):
+                raise ValueError("Very simple, Y or N...")
+            if prompt == "Y":
+                rules()
+                break
+            word = difficulty_level()
+            play_game(word)
+            break
+        except ValueError as e:
+            print(e)
+
+
 def rules():
     """
     Function to print the rules of the game
@@ -36,7 +57,7 @@ def username_prompt():
                 raise ValueError("\nYour name must contains letters only and "
                                  "atleast 1 character")
             print(f'\nEurgh! {username}, what a disgusting name\n')
-            rules()
+            rules_prompt()
             break
         except ValueError as e:
             print(e)
@@ -58,6 +79,7 @@ def play_game(random_word):
     draw_hangman(lives_left)
     print(f'\nThe Secret Word is : {secret_word}\n')
     print(f'\nYou have {lives_left} lives left.\n')
+    print(f"These are the letters you've guessed so far:{letters_guessed}")
 
     while guessed is False and lives_left > 0:
         try:
@@ -90,6 +112,8 @@ def play_game(random_word):
                 draw_hangman(lives_left)
                 print(f'\nThe Secret Word is : {secret_word}\n')
                 print(f'\nYou have {lives_left} lives left.\n')
+                print("These are the letters you've guessed so far: "
+                      f"{letters_guessed}")
             else:
                 print("\nThe instructions must've been too hard to follow... "
                       "guess one valid alphabetical character.\n")
