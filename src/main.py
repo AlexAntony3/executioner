@@ -29,13 +29,17 @@ def username_prompt():
     function to allow user to enter a username
     """
     while True:
-        username = input_typing("\nNow, lets get familiar, what should I call "
-                                "you?\n")
-        if username.isalpha() and len(username) >= 1:
+        try:
+            username = input_typing("\nNow, lets get familiar, what should I "
+                                    "call you?\n")
+            if not username.isalpha() or len(username) < 1:
+                raise ValueError("\nYour name must contains letters only and "
+                                 "atleast 1 character")
             print(f'\nEurgh! {username}, what a disgusting name\n')
             rules()
             break
-        print("\nYour name must contains letters only and atleast 1 character")
+        except ValueError as e:
+            print(e)
 
 
 def play_game(random_word):
