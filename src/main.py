@@ -1,5 +1,5 @@
 from .utility import input_typing, draw_hangman, clear_screen, \
-    pick_putdown, winner_logo, loser, intro_logo, typing
+    pick_putdown, winner_logo, loser, intro_logo, typing, goodbye
 from .words import difficulty_level
 
 
@@ -139,12 +139,13 @@ def play_again():
         replay = input("\nDo you want another try? Y/N :").upper()
 
         if replay == "N":
-            print("goodbye")
+            goodbye()
             break
         if replay == "Y":
             retry = True
             clear_screen()
             main()
+            break
         else:
             print("\nSimple instructions, Y or N...\n")
 
