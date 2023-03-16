@@ -5,7 +5,7 @@ from .words import difficulty_level
 
 def rules_prompt():
     """
-    Offers user an opportunity to pick if they would like to 
+    Offers user an opportunity to pick if they would like to
     read the instructions or not at the start of the game
     """
     while True:
@@ -136,18 +136,19 @@ def play_again():
     """
     retry = False
     while retry is not True:
-        replay = input("\nDo you want another try? Y/N :").upper()
-
-        if replay == "N":
-            goodbye()
-            break
-        if replay == "Y":
+        try:
+            replay = input("\nDo you want another try? Y/N :").upper()
+            if replay not in ("Y", "N"):
+                raise ValueError("\nSimple instructions, Y or N...\n")
+            if replay == "N":
+                goodbye()
+                break
             retry = True
             clear_screen()
             main()
             break
-        else:
-            print("\nSimple instructions, Y or N...\n")
+        except ValueError as e:
+            print(e)
 
 
 def main():
