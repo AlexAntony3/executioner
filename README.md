@@ -77,21 +77,28 @@ The below flow charts show the process that is to be followed in the development
 
 #### Initial Screen
 The initial feature observed by the user is the title: Executioner, a fast typewriter effect is given to the title which offers a fun experience to the user and allows them to know that they are going to be playing a game. Secondly, a slower typewriter effect input statement is present whereby, the user is prompted to enter a name. 
+
 ![Initial Screen](docs/screenshots/initial.png "Initial Screen")
 
 #### Username Prompt
 The username input prohibits the user to enter a name that is purely alphabetical and also stops the user entering nothing. The invalid entry error message is shown below. Furthermore if a valid entry is inputted by the user, then the next step of the game, which is asking the user if they would like to read instructions. 
+
 ![Username Prompt](docs/screenshots/username.png "Username Prompt")
 
 #### Instructions Prompt
 After successfully adding a username, the user is prompted to answer the question of "Do you want to read the instructions? Y/N?". The validation provided for this function only allows the user to answer with a "Y" or an "N". If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
+
 ![Instruction Error](docs/screenshots/instruction_error.png "Instruction Error")
+
 ![Instruction](docs/screenshots/instructions.png "Instructions")
+
 ![Instruction Skip](docs/screenshots/no_instructions.png "Instruction Skip")
 
 #### Difficulty Prompt
 The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select E, M or H, as shown in the screenshots below:
+
 ![Difficulty Error](docs/screenshots/difficulty_error.png "Difficulty Error")
+
 ![Difficulty](docs/screenshots/difficulty.png "Difficulty")
 
 #### Game Screen
@@ -102,19 +109,28 @@ The game screen compromises of multiple variables that the user requires to be a
 * All letters guessed by the user is also presented to the user, so they are aware of letters guessed. This helps the user from guessing the same letter again.
 * An input is presented to the user to enter a letter as a guess to check if it is in the secret word. This letter is fed through to all the other variables within the game screen.
 * Finally, validation is provided to the user to stop them from entering in an invalid response and the input is offered again.
+
 ![Game Screen Correct](docs/screenshots/gamescreen_correct.png "Game Screen Correct")
+
 ![Game Screen Incorrect](docs/screenshots/gamescreen_incorrect.png "Game Screen Incorrect")
+
 Validation
+
 ![Game Screen Error](docs/screenshots/gamescreen_error.png "Game Screen Error")
 
 #### End Screen
 The end screen is one of the final aspects that the user will meet before the game is finished. The end screen offers two outcomes, either the user is successful or unsuccessful. If the user guesses the word correctly, the user is met with a message and a custom font "WINNER". If the user does not guess the word within the number of lives (6) the user is met with another message and the custom font stating "LOSER". 
+
 ![Winner](docs/screenshots/winner.png "Winner")
+
 ![Loser](docs/screenshots/loser.png "Loser")
 
 The Final feature of the game is a question to ask the user if wants to retry the game. If a user would like to retry, they enter "Y" and the game is restarted. If the user does not, they are greeted with an animated message saying goodbye and an option to press run programme if they do want to restart the game after the game is finished. Moreover, as seen throughout the game, validation is added to make sure the valid responses are limited to "Y" or "N" and if neither of those entries are added, the user is greeted with an error message. 
+
 ![Goodbye](docs/screenshots/goodbye.png "Goodbye")
+
 Validation
+
 ![Retry Validation](docs/screenshots/retry_validation.png "Retry Validation")
 
 ### Future Implementations
