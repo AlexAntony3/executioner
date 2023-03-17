@@ -75,6 +75,18 @@ The below flow charts show the process that is to be followed in the development
 
 ### Current Features
 
+#### Initial Screen
+The initial feature observed by the user is the title: Executioner, a fast typewriter effect is given to the title which offers a fun experience to the user and allows them to know that they are going to be playing a game. Secondly, a slower typewriter effect input statement is present whereby, the user is prompted to enter a name. 
+![Initial Screen](docs/screenshots/initial "Initial Screen")
+
+#### Username Prompt
+The username input prohibits the user to enter a name that is purely alphabetical and also stops the user entering nothing. The invalid entry error message is shown below. Furthermore if a valid entry is inputted by the user, then the next step of the game, which is asking the user if they would like to read instructions. 
+![Username Prompt](docs/screenshots/username.png "Username Prompt")
+
+#### Instructions Prompt
+After successfully adding a username, the user is prompted to answer the question of "Do you want to read the instructions? Y/N?". The validation provided for this function only allows the user to answer with a "Y" or an "N". If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
+
+
 ### Future Implementations
 
 ---
