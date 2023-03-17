@@ -186,7 +186,31 @@ A bug that was discovered during the testing phase by my team was that when the 
 |60 - 65|None, enjoyed the game and was simple |N/A|
 
 ### Functionality Testing
-
+|Test|Outcome| Pass or Fail |
+|--|--|--|
+|Entering an invalid input to the input including empty, numbers or symbols to username prompt function|Error thrown stating "Your name must contain letters only and atleast 1 character"| Pass|
+|Add conforming input to username|Name recorded and used to form returned statement| Pass|
+|Add conforming input to username|Prompt to ask user if they want to read the instructions| Pass|
+|Entering an invalid input to the input including empty, numbers or symbols to rules prompt function|Error thrown stating “Very simple, Y or N...”| Pass|
+|Entering "Y" in upper and lowercase to the rules prompt function|instructions printed| Pass|
+|Entering "N" in upper and lowercase to the rules prompt function|Difficulty level function initiated| Pass|
+|Entering an invalid input to the input including empty, numbers or symbols to Difficulty selector function|Error thrown stating "clearly, that was too many instructions for you, enter a valid letter"|Pass|
+|Entering "E" in upper and lowercase to the difficulty selector function|Game started with an easy word| Pass|
+|Entering "M" in upper and lowercase to the difficulty selector function|Game started with a medium word| Pass|
+|Entering "H" in upper and lowercase to the difficulty selector function|Game started with a hard word| Pass|
+|Entering an invalid input to the input including empty, numbers, repeated letters or symbols when prompted to guess a letter|Error thrown stating "The instructions must've been too hard to follow... guess one valid alphabetical character"|Pass|
+|Entering a correct letter into the game|letter printed in the correct location, even when the same letter appears twice| Pass|
+|Entering a correct letter into the game|Feedback given to the user stating "Lucky guess, `{letter}` is in the secret word| Pass|
+|Entering an incorrect letter into the game|random Putdown generated and presented to the user | Pass|
+|Entering any letter into the game|letter is added to the letters guessed section and printed on console | Pass|
+|Correctly guessing the secret word|"WINNER" printed in the style of the logo| Pass|
+|Correctly guessing the secret word|Feedback given stating "...I didn't expect that to happen, you're not as dumb as you look. Well done" | Pass|
+|Incorrectly guessing the secret word|"loser" printed in the style of the logo| Pass|
+|Incorrectly guessing the secret word|Feedback given stating "I told you it was hard. HAHAHA the correct word was: `{word}`| Pass|
+|Completing all guesses|Replay of game offered to the user| Pass|
+|Entering an invalid input to the input including empty, numbers or symbols asked if they want to retry|Error thrown stating "Simple instructions, Y or N...| Pass|
+|Entering "Y" to retry option|Game restarted| Pass|
+|Entering "N" to retry option|Goodbye printed in logo styling, with an additional comment to press run programme to retry at a later time.| Pass|
 
 ---
 
