@@ -216,7 +216,5 @@ As a pure python code can only be displayed on a terminal of your own machine or
 
 ## Credits
 * [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/ "Simen Daehlin") - Assistance throughout the project
-
----
-
-## Inspirations
+* My testing team, this was a team of my colleagues, friends and family. - Thank you for all the rigerous testing and feedback.
+* [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w&ab_channel=Kite "Kite") - Example and inspirations of the hangman game. 
