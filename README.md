@@ -143,7 +143,10 @@ Validation
 
 | Bug detected | Action |
 |--|--|
-|XX|YY|
+|When testing the game, for any input, if a lowercase letter was added, the function would not conduct correctly. |The validation was fixed by adding an `.upper()`to all inputs. This meant that all inputs would be converted to uppercase automatically.  |
+|When moving functions into different files for best practise, `pylint` errors were raised or `ModuleNotFoundError` were presented |The issue was attempting a relative import outside of the top level package. The solution was to pop an `__init__.py` file in the directory. This recognised the linking folders as a package. |
+|When prompted to enter the username, it was observed that if nothing was entered, the programme would continue with no username|A fix found for this was to use `raise ValueError` which made sure that the username had to only contain alphabetical and had to be atleast 1 letter.|
+|During testing the draw hangman function would present the pole of the hanging station to mis-align and not be straight on console.|The error was caused by the additional `\`, to fix this I added another space bar to the hangman drawings affected and the pole was straight on console.|
 
 ### Unfixed Bugs
 A bug that was discovered during the testing phase by my team was that when the typewriter style printing functions were ran, pressing mutliple buttons or enter numerous times would keep looping some functions. As this is a bug I could not fix due to time constraints, I added an instruction to tell the user to wait for all the text to load before typing in a response. 
