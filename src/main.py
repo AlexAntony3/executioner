@@ -10,7 +10,7 @@ def rules_prompt():
     """
     while True:
         try:
-            prompt = input_typing("\n Do you want to read the "
+            prompt = input_typing("\nDo you want to read the "
                                   "instructions? Y/N?").upper()
             if prompt not in ("Y", "N"):
                 raise ValueError("Very simple, Y or N...")
@@ -32,7 +32,7 @@ def rules():
            "has 3 difficulties, be warned though,\nthey are really tough."
            "\n"
            "\nHere are the instructions:\n"
-           "1. First of all, please let all the typewriter\n animation to "
+           "1. First of all, please let all the typewriter\nanimation to "
            "finish before entering anything. If the programme loops \n"
            "press run programme to start again.\n"
            "2. Pick the difficulty you would like\n"
