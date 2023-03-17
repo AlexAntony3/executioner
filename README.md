@@ -107,9 +107,10 @@ The game screen compromises of multiple variables that the user requires to be a
 Validation
 ![Game Screen Error](docs/screenshots/gamescreen_error.png "Game Screen Error")
 
-
-
-#### 
+#### End Screen
+The end screen is the final aspect that the user will meet before the game is finished. The end screen offers two outcomes, either the user is successful or unsuccessful. If the user guesses the word correctly, the user is met with a message and a custom font "WINNER". If the user does not guess the word within the number of lives (6) the user is met with another message and the custom font stating "LOSER". 
+![Winner](docs/screenshots/winner.png "Winner")
+![Loser](docs/screenshots/loser.png "Loser")
 
 ### Future Implementations
 
