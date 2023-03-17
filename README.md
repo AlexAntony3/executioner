@@ -146,6 +146,7 @@ Validation
 |XX|YY|
 
 ### Unfixed Bugs
+A bug that was discovered during the testing phase by my team was that when the typewriter style printing functions were ran, pressing mutliple buttons or enter numerous times would keep looping some functions. As this is a bug I could not fix due to time constraints, I added an instruction to tell the user to wait for all the text to load before typing in a response. 
 
 ---
 
