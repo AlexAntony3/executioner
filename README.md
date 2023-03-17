@@ -118,7 +118,9 @@ Validation
 ![Retry Validation](docs/screenshots/retry_validation.png "Retry Validation")
 
 ### Future Implementations
-
+* In the future, given more time I would like to improve adding designs and colour to the webpage, this would entice a user to stay on the page and recommend the page to others.
+* With more time and resources, I would like to implement a feature to share scores with others on social media.
+* With more time and resources, I would like to add a hint function to each word for user's who require additional help. 
 ---
 
 ## Bug Fixes
