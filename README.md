@@ -174,9 +174,19 @@ A bug that was discovered during the testing phase by my team was that when the 
 ---
 
 ## Testing
-| Testing |Outcome | Pass or Fail |
+
+### Testing group feedback
+| Testing Age Range |Constructive Feedback| Implemented? |
 |--|--|--|
-|XX|YY|Pass|
+|14 - 18|Rather than just plain text, make the title a cooler font style|Yes|
+|24 - 30|Show the letters that have already been guessed|Yes|
+|24 - 30|Instead of having to always read the instructions, offer an option to skip the instructions.|Yes|
+|24 - 30|Even though the hangman structure is progressing, add a record of lives remaining.|Yes|
+|31 - 40|Clear the screen with each guess and the function must be compatible to both windows and mac|Yes|
+|60 - 65|None, enjoyed the game and was simple |N/A|
+
+### Functionality Testing
+
 
 ---
 
