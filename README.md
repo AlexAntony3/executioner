@@ -89,6 +89,11 @@ After successfully adding a username, the user is prompted to answer the questio
 ![Instruction](docs/screenshots/instructions.png "Instructions")
 ![Instruction Skip](docs/screenshots/no_instructions.png "Instruction Skip")
 
+#### Difficulty Prompt
+The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select E, M or H, as shown in the screenshots below:
+![Difficulty Error](docs/screenshots/difficulty_error.png "Difficulty Error")
+![Difficulty](docs/screenshots/difficulty.png "Difficulty")
+
 ### Future Implementations
 
 ---
