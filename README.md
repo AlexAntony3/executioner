@@ -77,7 +77,7 @@ The below flow charts show the process that is to be followed in the development
 
 #### Initial Screen
 The initial feature observed by the user is the title: Executioner, a fast typewriter effect is given to the title which offers a fun experience to the user and allows them to know that they are going to be playing a game. Secondly, a slower typewriter effect input statement is present whereby, the user is prompted to enter a name. 
-![Initial Screen](docs/screenshots/initial "Initial Screen")
+![Initial Screen](docs/screenshots/initial.png "Initial Screen")
 
 #### Username Prompt
 The username input prohibits the user to enter a name that is purely alphabetical and also stops the user entering nothing. The invalid entry error message is shown below. Furthermore if a valid entry is inputted by the user, then the next step of the game, which is asking the user if they would like to read instructions. 
@@ -93,6 +93,23 @@ After successfully adding a username, the user is prompted to answer the questio
 The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select E, M or H, as shown in the screenshots below:
 ![Difficulty Error](docs/screenshots/difficulty_error.png "Difficulty Error")
 ![Difficulty](docs/screenshots/difficulty.png "Difficulty")
+
+#### Game Screen
+The game screen compromises of multiple variables that the user requires to be able to play game whilst being UX friendly. As typically observed in hangman, a visible and transitional hanging of a man is presented. Other features presented ara:
+* The secret word that the user has to guess is presented as underscores, which updates if the letter guessed is in the secret word.
+* If the letter guessed is not in the secret word, a randomly chosen putdown is presented to the user. This improves the overall interactibility of the game as well as the user interphase. 
+* The number of lives left for the user is also presented, this added with the hangman progression allows the user to know how much of the game is remaining. If the user guesses an incorrect letter, the number of lives go down. 
+* All letters guessed by the user is also presented to the user, so they are aware of letters guessed. This helps the user from guessing the same letter again.
+* An input is presented to the user to enter a letter as a guess to check if it is in the secret word. This letter is fed through to all the other variables within the game screen.
+* Finally, validation is provided to the user to stop them from entering in an invalid response and the input is offered again.
+![Game Screen Correct](docs/screenshots/gamescreen_correct.png "Game Screen Correct")
+![Game Screen Incorrect](docs/screenshots/gamescreen_incorrect.png "Game Screen Incorrect")
+Validation
+![Game Screen Error](docs/screenshots/gamescreen_error.png "Game Screen Error")
+
+
+
+#### 
 
 ### Future Implementations
 
