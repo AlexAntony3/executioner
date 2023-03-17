@@ -114,6 +114,8 @@ The end screen is one of the final aspects that the user will meet before the ga
 
 The Final feature of the game is a question to ask the user if wants to retry the game. If a user would like to retry, they enter "Y" and the game is restarted. If the user does not, they are greeted with an animated message saying goodbye and an option to press run programme if they do want to restart the game after the game is finished. Moreover, as seen throughout the game, validation is added to make sure the valid responses are limited to "Y" or "N" and if neither of those entries are added, the user is greeted with an error message. 
 ![Goodbye](docs/screenshots/goodbye.png "Goodbye")
+Validation
+![Retry Validation](docs/screenshots/retry_validation.png "Retry Validation")
 
 ### Future Implementations
 
