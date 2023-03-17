@@ -98,16 +98,15 @@ The below flow charts show the process that is to be followed in the development
 * JavaScript - supplied by code instutute template
 * Python
 
-### Libraries
-
-* [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols")
-
 ### Tools
 * [draw.io](https://app.diagrams.net/ "draw.io")
 * [Heroku](https://www.heroku.com/ "Heroku")
 * [Git](https://git-scm.com/ "Git")
 * [GitHub](https://github.com/ "GitHub")
 * [GitPod](https://www.gitpod.io/ "GitPod")
+* [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols")
+* [AmIResponsive](https://ui.dev/amiresponsive "AmIResponsive")
+* [Python Linter](https://pep8ci.herokuapp.com/ "Python Linter")
 ---
 
 ## Testing
