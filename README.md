@@ -148,7 +148,7 @@ The username input prohibits the user to enter a name that is purely alphabetica
 
 #### Instructions Prompt
 
-After successfully adding a username, the user is prompted to answer the question of "Do you want to read the instructions? Y/N?". The validation provided for this function only allows the user to answer with a "Y" or an "N". If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
+After successfully adding a username, the user is prompted to answer the question of `Do you want to read the instructions? Y/N?`. The validation provided for this function only allows the user to answer with a **"Y"** or an **"N"**. If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
 
 ![Instruction](docs/screenshots/instructions.png "Instructions")
 
