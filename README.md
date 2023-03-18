@@ -229,9 +229,9 @@ A bug that was discovered during the testing phase by my team was that when the 
 
 ### Langugages
 
-* HTML - supplied by code instutute template
-* CSS - supplied by code instutute template
-* JavaScript - supplied by code instutute template
+* HTML - supplied by code institute template
+* CSS - supplied by code institute template
+* JavaScript - supplied by code institute template
 * [Python](https://www.python.org/ "Python")
 
 ### Tools
@@ -318,7 +318,7 @@ In conclusion, I am very proud of what I have built. Throughout the project, the
 
 ## Deployments
 
-As a pure python code can only be displayed on a terminal of your own machine or within gitpod, the code-instutute python essentials template is to be used on the workspace so that it can later be deployed to [Heroku](https://www.heroku.com/  "Heroku") for user accessibility.
+As a pure python code can only be displayed on a terminal of your own machine or within gitpod, the code-institute python essentials template is to be used on the workspace so that it can later be deployed to [Heroku](https://www.heroku.com/  "Heroku") for user accessibility.
 
 ### Pre-requisite requirements
 
