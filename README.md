@@ -376,7 +376,13 @@ If you would like to fork any repositories, follow the steps below:
 * Select an **owner** for the repository
 * **Change** the name of the repository if required
 * Choose whether to **copy** all branches or just the `default` branch. 
-* Click the Create Fork button and you have forked your repository.
+* Click the Create Fork button and you have forked my repository.
+
+### Local Development
+
+* To run the programme on your development tool, make sure you have atleast version **3.8+** of python installed. 
+* To run the code on the development tool, type in the following to the terminal:
+> python3 run.py
 
 ---
 
