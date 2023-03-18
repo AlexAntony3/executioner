@@ -246,6 +246,22 @@ As a pure python code can only be displayed on a terminal of your own machine or
 * Scroll further down and in the automatic deploy section, click the **Enable Automatic Deploys** so that for every push from GitHub, the app is automatically updated. 
 * Finally click on **Deploy Branch** to deploy the application. 
 * Once the application is deployed, click on the **view** button to see the programme running. 
+
+### Cloning
+
+If you would like to clone any repositories, follow the steps below:
+* Log in to **Github**
+* Access the required repository or my repository by clicking the following link: [Executioner Repository](https://github.com/AlexAntony3/executioner  "Executioner Repository")
+* Click on the `<> Code` button.
+* In the **local** tab, select the **HTTPS** button and copy the URL.
+* Open up a new workspace
+* Use the `git clone` command In the command line of the workspace, paste in the copied URL. It should look like this:
+> git clone https://github.com/YOURUSERNAME/YOURREPOSITORY
+* Press **Enter** and the repository will be cloned!.
+
+### Forking
+
+
 ---
 
 ## Credits
