@@ -250,7 +250,7 @@ As a pure python code can only be displayed on a terminal of your own machine or
 ### Cloning
 
 If you would like to clone any repositories, follow the steps below:
-* Log in to **Github**
+* Log in to **GitHub**
 * Access the required repository or my repository by clicking the following link: [Executioner Repository](https://github.com/AlexAntony3/executioner  "Executioner Repository")
 * Click on the `<> Code` button.
 * In the **local** tab, select the **HTTPS** button and copy the URL.
@@ -261,6 +261,16 @@ If you would like to clone any repositories, follow the steps below:
 
 ### Forking
 
+If you would like to fork any repositories, follow the steps below:
+* Log in to **GitHub**.
+* Navigate to the repository you would like to **fork**. 
+* At the top of the page, locate the **fork** icon
+![Fork Icon](docs/screenshots/fork "Fork Icon")
+* Click on the **downward** icon next to fork and press **create a new fork**.
+* Select an **owner** for the repository
+* **Change** the name of the repository if required
+* Choose whether to **copy** all branches or just the `default` branch. 
+* Click the Create Fork button and you have forked your repository.
 
 ---
 
