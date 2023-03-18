@@ -1,5 +1,5 @@
 """
-file that runs the entire game
+import game files and functions to run the entire game
 """
 from src.main import main
 

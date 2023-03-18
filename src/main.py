@@ -26,7 +26,7 @@ def rules_prompt():
 
 def rules():
     """
-    Function to print the rules of the game
+    Print the rules/instructions of the game
     """
     typing("Welcome to Executioner!\nA history based hangman game that "
            "has 3 difficulties, be warned though,\nthey are really tough."
@@ -50,7 +50,7 @@ def rules():
 
 def username_prompt():
     """
-    function to allow user to enter a username
+    Allow user to enter a username
     """
     while True:
         try:
@@ -68,7 +68,7 @@ def username_prompt():
 
 def play_game(random_word):
     """
-    Function to use pre-requisite variables to play the game, this includes
+    Use pre-requisite variables to play the game, this includes
     converting the random word into underscores checking if the letter
     entered is within the word and also draw the hangman according to
     lives lost.
@@ -122,7 +122,7 @@ def play_game(random_word):
                       "guess one valid alphabetical character.\n")
         except ValueError as e:
             print(e)
-
+    # let's the user know if they've won or not and offers feedback
     if guessed:
         print("\n... I didn't expect that to happen, you're not as "
               "dumb as you look. Well done.\n")
@@ -135,7 +135,7 @@ def play_game(random_word):
 
 def play_again():
     """
-    Function to allow user the option to play again once game is completed.
+    Allow user the option to play again once game is completed.
     """
     retry = False
     while retry is not True:
@@ -156,7 +156,7 @@ def play_again():
 
 def main():
     """
-    main function that runs all other functions
+    main function that calls other functions to play the game
     """
     intro_logo()
     username_prompt()

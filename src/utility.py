@@ -17,8 +17,8 @@ def clear_screen():
 
 def typing(content, speed):
     """
-    Function designed to print contents in typewriter format
-    in a fast method.
+    Print contents in typewriter format
+    in two speeds method.
     """
     for char in content:
         sys.stdout.write(char)
@@ -31,8 +31,8 @@ def typing(content, speed):
 
 def input_typing(content):
     """
-    Function designed to print contents in typewriter format
-    in a slow method.
+    Print contents in typewriter format
+    in a slow method for inputs.
     """
     for char in content:
         sys.stdout.write(char)
@@ -60,7 +60,7 @@ def pick_putdown():
 
 def draw_hangman(lives_left):
     """
-    Function to draw progressing hangman figure according to lives lost.
+    Draw progressing hangman figure according to lives lost.
     """
     if lives_left == 6:
         print('''
@@ -131,7 +131,7 @@ def draw_hangman(lives_left):
 
 def intro_logo():
     """
-    Function to call the introduction logo
+    Introduction logo
     """
     typing("""
         ███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗
@@ -151,7 +151,7 @@ def intro_logo():
 
 def winner_logo():
     """
-    function to call the winner logo
+    Winner logo
     """
     print("""
 
@@ -166,7 +166,7 @@ def winner_logo():
 
 def loser():
     """
-    function to call the loser logo
+    Loser logo
     """
     print("""
 
@@ -182,7 +182,7 @@ def loser():
 def goodbye():
     """
     Goodbye Logo for users that don't want to play
-    again
+    again and additional text
     """
     typing("""
 ░██████╗░░█████╗░░█████╗░██████╗░██████╗░██╗░░░██╗███████╗

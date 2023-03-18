@@ -1,5 +1,6 @@
 """
-File for words used in the game depending on difficulty
+File for functions relating to attaining the words for the game
+depending on difficulty
 """
 import random
 from .utility import input_typing, clear_screen
@@ -20,7 +21,7 @@ hard_words = ('guillotine casualties protection liberation '
 
 def difficulty_level():
     """
-    function to set difficulty level of questions
+    Set difficulty level of word for the game and returns the relative word
     """
     choice = False
     while not choice:
