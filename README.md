@@ -51,6 +51,7 @@ The game is pretty simple so there's not too much to it
 * Lives remaining must be presented after each guess.
 
 ---
+
 ## Design
 
 ### Logo
@@ -180,6 +181,7 @@ A bug that was discovered during the testing phase by my team was that when the 
 * [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols")
 * [AmIResponsive](https://ui.dev/amiresponsive "AmIResponsive")
 * [Python Linter](https://pep8ci.herokuapp.com/ "Python Linter")
+
 ---
 
 ## Testing
@@ -224,7 +226,7 @@ A bug that was discovered during the testing phase by my team was that when the 
 ---
 
 ## Concluding statements
-In conclusion, I am very proud of what I have built. Throughout the project, there were multiple errors I ran across which took a lot of time to fix, but it was worth it. The game I designed handles all invalid inputs, provides feedback to the user and replicates a classical game that is known by everyone around the globe. The game is intuitive and easy to use. My parents who are the least tech-savvy people I know, was able to play the game without any further instructions. 
+In conclusion, I am very proud of what I have built. Throughout the project, there were multiple errors I ran across which took a lot of time to fix, but it was worth it. The game I designed handles all invalid inputs, provides feedback to the user and replicates a classical game that is known by everyone around the globe. The game is intuitive and easy to use. My parents who are the least tech-savvy people I know, was able to play the game without any further instructions. Overall, the **requirements** of the game, such as the **goals**, **User stories**, **Site Owner's Goals** and **Expectations** have been met sufficiently. 
 
 ---
 
