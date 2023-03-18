@@ -232,7 +232,7 @@ A bug that was discovered during the testing phase by my team was that when the 
 * HTML - supplied by code instutute template
 * CSS - supplied by code instutute template
 * JavaScript - supplied by code instutute template
-* Python
+* [Python](https://www.python.org/ "Python")
 
 ### Tools
 
