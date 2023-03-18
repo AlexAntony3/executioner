@@ -59,15 +59,15 @@ The game is pretty simple so there's not too much to it
 
 The logo was designed using ASCII text generator [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols"). This offers the user a bold enterance to the game and stands out as the first thing you see. This text generator and font style will be used for all main texts, such as game over and congratulations. 
 
-### Colour Scheme
+### Hangman Drawing
 
-The colours used in text is as follows to add more interactivity to the website. 
+The ASCII art used for the hangman generation was inspired by [Hangman Art](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c "Hangman Art"). This drawing required updating for the format used within the game. The aim of the hangman drawing is simple, if a letter is guessed incorrectly, the hangman process is progressed, otherwise it will stay constant.
 
 ### Flow Charts
 
 The below flow charts show the process that is to be followed in the development of the application. The flow chart was created using [draw.io](https://app.diagrams.net/ "draw.io"). The validation required at each input point is added to make sure that the game is reactive to all possible outcomes. 
 
-![Process Flow Chart](docs/screenshots/flowchart.png "Process Flow Chart")
+![Process Flow Chart](docs/flowchart/flowchart.png "Process Flow Chart")
 
 ---
 
@@ -85,21 +85,29 @@ The username input prohibits the user to enter a name that is purely alphabetica
 
 ![Username Prompt](docs/screenshots/username.png "Username Prompt")
 
+##### Username Prompt Validation
+
+![Username Validation](docs/screenshots/username_error.png "Username Validation")
+
 #### Instructions Prompt
 After successfully adding a username, the user is prompted to answer the question of "Do you want to read the instructions? Y/N?". The validation provided for this function only allows the user to answer with a "Y" or an "N". If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
-
-![Instruction Error](docs/screenshots/instruction_error.png "Instruction Error")
 
 ![Instruction](docs/screenshots/instructions.png "Instructions")
 
 ![Instruction Skip](docs/screenshots/no_instructions.png "Instruction Skip")
 
+##### Instructions Prompt Validation
+
+![Instruction Error](docs/screenshots/instruction_error.png "Instruction Error")
+
 #### Difficulty Prompt
 The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select E, M or H, as shown in the screenshots below:
 
-![Difficulty Error](docs/screenshots/difficulty_error.png "Difficulty Error")
-
 ![Difficulty](docs/screenshots/difficulty.png "Difficulty")
+
+##### Difficulty Prompt Validation
+
+![Difficulty Error](docs/screenshots/difficulty_error.png "Difficulty Error")
 
 #### Game Screen
 The game screen compromises of multiple variables that the user requires to be able to play game whilst being UX friendly. As typically observed in hangman, a visible and transitional hanging of a man is presented. Other features presented ara:
@@ -114,7 +122,7 @@ The game screen compromises of multiple variables that the user requires to be a
 
 ![Game Screen Incorrect](docs/screenshots/gamescreen_incorrect.png "Game Screen Incorrect")
 
-Validation
+##### Game Screen Validation
 
 ![Game Screen Error](docs/screenshots/gamescreen_error.png "Game Screen Error")
 
@@ -129,7 +137,7 @@ The Final feature of the game is a question to ask the user if wants to retry th
 
 ![Goodbye](docs/screenshots/goodbye.png "Goodbye")
 
-Validation
+##### End Screen Validation
 
 ![Retry Validation](docs/screenshots/retry_validation.png "Retry Validation")
 
@@ -137,6 +145,7 @@ Validation
 * In the future, given more time I would like to improve adding designs and colour to the webpage, this would entice a user to stay on the page and recommend the page to others.
 * With more time and resources, I would like to implement a feature to share scores with others on social media.
 * With more time and resources, I would like to add a hint function to each word for user's who require additional help. 
+
 ---
 
 ## Bug Fixes
