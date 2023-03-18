@@ -148,7 +148,7 @@ The username input prohibits the user to enter a name that is purely alphabetica
 
 #### Instructions Prompt
 
-After successfully adding a username, the user is prompted to answer the question of `Do you want to read the instructions? Y/N?`. The validation provided for this function only allows the user to answer with a **"Y"** or an **"N"**. If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
+After successfully adding a username, the user is prompted to answer the question of `Do you want to read the instructions? Y/N?`. The validation provided for this function only allows the user to answer with a **Y** or an **N**. If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a **Y**, the instructions of the game are provided, if they answer with an **N**, the user goes onto the next step of the game. 
 
 ![Instruction](docs/screenshots/instructions.png "Instructions")
 
@@ -160,7 +160,7 @@ After successfully adding a username, the user is prompted to answer the questio
 
 #### Difficulty Prompt
 
-The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select E, M or H, as shown in the screenshots below:
+The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select **E**, **M** or **H**, as shown in the screenshots below:
 
 ![Difficulty](docs/screenshots/difficulty.png "Difficulty")
 
@@ -188,13 +188,13 @@ The game screen compromises of multiple variables that the user requires to be a
 
 #### End Screen
 
-The end screen is one of the final aspects that the user will meet before the game is finished. The end screen offers two outcomes, either the user is successful or unsuccessful. If the user guesses the word correctly, the user is met with a message and a custom font "WINNER". If the user does not guess the word within the number of lives (6) the user is met with another message and the custom font stating "LOSER". 
+The end screen is one of the final aspects that the user will meet before the game is finished. The end screen offers two outcomes, either the user is successful or unsuccessful. If the user guesses the word correctly, the user is met with a message and a custom font **WINNER**. If the user does not guess the word within the number of lives (6) the user is met with another message and the custom font stating **LOSER**. 
 
 ![Winner](docs/screenshots/winner.png "Winner")
 
 ![Loser](docs/screenshots/loser.png "Loser")
 
-The Final feature of the game is a question to ask the user if wants to retry the game. If a user would like to retry, they enter "Y" and the game is restarted. If the user does not, they are greeted with an animated message saying goodbye and an option to press run programme if they do want to restart the game after the game is finished. Moreover, as seen throughout the game, validation is added to make sure the valid responses are limited to "Y" or "N" and if neither of those entries are added, the user is greeted with an error message. 
+The Final feature of the game is a question to ask the user if wants to retry the game. If a user would like to retry, they enter **Y** and the game is restarted. If the user does not, they are greeted with an animated message saying goodbye and an option to press run programme if they do want to restart the game after the game is finished. Moreover, as seen throughout the game, validation is added to make sure the valid responses are limited to **Y** or **N** and if neither of those entries are added, the user is greeted with an error message. 
 
 ![Goodbye](docs/screenshots/goodbye.png "Goodbye")
 
@@ -215,7 +215,7 @@ The Final feature of the game is a question to ask the user if wants to retry th
 | Bug detected | Action |
 |--|--|
 |When testing the game, for any input, if a lowercase letter was added, the function would not conduct correctly. |The validation was fixed by adding an `.upper()`to all inputs. This meant that all inputs would be converted to uppercase automatically.  |
-|When moving functions into different files for best practise, `pylint` errors were raised or `ModuleNotFoundError` were presented |The issue was attempting a relative import outside of the top level package. The solution was to pop an `__init__.py` file in the directory. This recognised the linking folders as a package. |
+|When moving functions into different files for best practise, `pylint` errors were raised or `ModuleNotFoundError` were presented |The issue was attempting a relative import outside of the top level package. The solution was to pop an `__init__.py` file in the directory. This recognised the linking folders as a package. For more information on this, click [here](https://careerkarma.com/blog/python-beyond-top-level-package-error-in-relative-import/ "Career Karma") |
 |When prompted to enter the username, it was observed that if nothing was entered, the programme would continue with no username|A fix found for this was to use `raise ValueError` which made sure that the username had to only contain alphabetical and had to be atleast 1 letter.|
 |During testing the draw hangman function would present the pole of the hanging station to mis-align and not be straight on console.|The error was caused by the additional `\`, to fix this I added another space bar to the hangman drawings affected and the pole was straight on console.|
 
