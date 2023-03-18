@@ -114,11 +114,11 @@ The game is pretty simple so there's not too much to it
 
 ![Logo](docs/screenshots/logo.png "Logo")
 
-The logo was designed using ASCII text generator [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols"). This offers the user a bold enterance to the game and stands out as the first thing you see. This text generator and font style will be used for all main texts, such as game over and congratulations. 
+The logo was designed using [ASCII](https://en.wikipedia.org/wiki/ASCII_art "ASCII") text generator [fsymbols](https://fsymbols.com/generators/carty/ "fsymbols"). This offers the user a bold enterance to the game and stands out as the first thing you see. This text generator and font style will be used for all main texts, such as game over and congratulations. 
 
 ### Hangman Drawing
 
-The ASCII art used for the hangman generation was inspired by [Hangman Art](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c "Hangman Art"). This drawing required updating for the format used within the game. The aim of the hangman drawing is simple, if a letter is guessed incorrectly, the hangman process is progressed, otherwise it will stay constant.
+The [ASCII](https://en.wikipedia.org/wiki/ASCII_art "ASCII") art used for the hangman generation was inspired by [Hangman Art](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c "Hangman Art"). This drawing required updating for the format used within the game. The aim of the hangman drawing is simple, if a letter is guessed incorrectly, the hangman process is progressed, otherwise it will stay constant.
 
 ### Flow Charts
 
