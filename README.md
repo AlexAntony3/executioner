@@ -58,9 +58,13 @@ The game is pretty simple so there's not too much to it
       - [words.py](#wordspy)
   * [Concluding statements](#concluding-statements)
   * [Deployments](#deployments)
+    + [Pre-requisite requirements](#pre-requisite-requirements)
+      - [Optional step (if required)](#optional-step--if-required-)
     + [Heroku](#heroku)
-    + [Cloning](#cloning)
+  * [Development](#development)
     + [Forking](#forking)
+    + [Cloning](#cloning)
+    + [Local Development](#local-development)
   * [Credits](#credits)
 
 ---
