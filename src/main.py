@@ -20,8 +20,8 @@ def rules_prompt():
             word = difficulty_level()
             play_game(word)
             break
-        except ValueError as e:
-            print(e)
+        except ValueError as value_error:
+            print(value_error)
 
 
 def rules():
@@ -62,8 +62,8 @@ def username_prompt():
             print(f'\nEurgh! {username}, what a disgusting name\n')
             rules_prompt()
             break
-        except ValueError as e:
-            print(e)
+        except ValueError as value_error:
+            print(value_error)
 
 
 def play_game(random_word):
@@ -120,8 +120,8 @@ def play_game(random_word):
             else:
                 print("\nThe instructions must've been too hard to follow... "
                       "guess one valid alphabetical character.\n")
-        except ValueError as e:
-            print(e)
+        except ValueError as value_error:
+            print(value_error)
     # let's the user know if they've won or not and offers feedback
     if guessed:
         print("\n... I didn't expect that to happen, you're not as "
@@ -150,8 +150,8 @@ def play_again():
             clear_screen()
             main()
             break
-        except ValueError as e:
-            print(e)
+        except ValueError as value_error:
+            print(value_error)
 
 
 def main():
