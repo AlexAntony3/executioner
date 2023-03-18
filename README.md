@@ -223,6 +223,11 @@ A bug that was discovered during the testing phase by my team was that when the 
 |Entering "Y" to retry option|Game restarted| Pass|
 |Entering "N" to retry option|Goodbye printed in logo styling, with an additional comment to press run programme to retry at a later time.| Pass|
 
+### PEP8 Linter Testing
+As no extra additions were done to the HTML, CSS or JS files, validation checks were not performed. However, as all the code is written in python, all code was entered into [Python Linter](https://pep8ci.herokuapp.com/ "Python Linter"). The code ran through with no problems raised.
+
+
+
 ---
 
 ## Concluding statements
