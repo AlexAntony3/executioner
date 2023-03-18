@@ -7,6 +7,7 @@ Welcome to Executioner, a hangman game with 3 difficulties based on words relati
 ![Screen Displays](docs/screenshots/responsiveness.png "Screen Displays")
 
 ### How to play
+
 The game is pretty simple so there's not too much to it
 * Enter your username
 * Pick a difficulty.
@@ -19,6 +20,7 @@ The game is pretty simple so there's not too much to it
 ## UX (user experience)
 
 ### Goals
+
 * 3 levels of difficulty, the harder the difficulty the more letters there are to guess. 
 * Numerically track the amount of lives left in the game.
 * Interactive input requirement for the user with validation.
@@ -26,6 +28,7 @@ The game is pretty simple so there's not too much to it
 * Clear instructions displayed.
 
 ### User's Stories
+
 * As a user, I want to be able to select a difficulty I require. 
 * As a user, I expect the underscores of the hidden word is the same length as the secret word. 
 * As a user, I want to have feedback if the same letter has already been guessed
@@ -33,18 +36,21 @@ The game is pretty simple so there's not too much to it
 * As a user, I want to see the man hanged when all lives are lost. 
 
 ### Site Owner's Goals
+
 * If an invalid input is entered e.g. 1, 2, 3 etc. validation is required to inform the user to enter a valid input. 
 * Feedback should be presented to the user, when a correct or incorrect letter is entered. 
 * When lives are lost a progressional display must be present leading to the final hanged man when all lives are lost.
 * The user can replay the game at different or a the same difficulty upon completion. 
 
 ### Expectation
+
 * I expect feedback to be visible when inputted by the user.
 * I expect all input to have validation to make sure the user can only enter the required input. 
 * I expect the user to be able to enter a username and have feedback associated to the feedback. 
 * I expect text to be spaces and formatted in a modern format. 
 
 ### Requirements
+
 * Validation is required for all user inputs.
 * Difficulty must be able to be selected by selecting E, M or H for (easy, medium or hard respectively)
 * All secret answers must be related to the pre-19th century theme. 
@@ -91,6 +97,7 @@ The username input prohibits the user to enter a name that is purely alphabetica
 ![Username Validation](docs/screenshots/username_error.png "Username Validation")
 
 #### Instructions Prompt
+
 After successfully adding a username, the user is prompted to answer the question of "Do you want to read the instructions? Y/N?". The validation provided for this function only allows the user to answer with a "Y" or an "N". If either of those answers are not entered, an error is shown and the user is prompted again to answer the question. If the user answers with a Y, the instructions of the game are provided, if they answer with an N, the user goes onto the next step of the game. 
 
 ![Instruction](docs/screenshots/instructions.png "Instructions")
@@ -102,6 +109,7 @@ After successfully adding a username, the user is prompted to answer the questio
 ![Instruction Error](docs/screenshots/instruction_error.png "Instruction Error")
 
 #### Difficulty Prompt
+
 The next step of the game is the ask the user what level of difficulty they would like to play at. The length of the secret word to guess will increase relatively according to what difficulty is selected. (e.g easy, will be words like BELL and hard would be words like GUILLOTINE) There is also validation to this input by only allowing the user to select E, M or H, as shown in the screenshots below:
 
 ![Difficulty](docs/screenshots/difficulty.png "Difficulty")
@@ -111,6 +119,7 @@ The next step of the game is the ask the user what level of difficulty they woul
 ![Difficulty Error](docs/screenshots/difficulty_error.png "Difficulty Error")
 
 #### Game Screen
+
 The game screen compromises of multiple variables that the user requires to be able to play game whilst being UX friendly. As typically observed in hangman, a visible and transitional hanging of a man is presented. Other features presented ara:
 * The secret word that the user has to guess is presented as underscores, which updates if the letter guessed is in the secret word.
 * If the letter guessed is not in the secret word, a randomly chosen putdown is presented to the user. This improves the overall interactibility of the game as well as the user interphase. 
@@ -128,6 +137,7 @@ The game screen compromises of multiple variables that the user requires to be a
 ![Game Screen Error](docs/screenshots/gamescreen_error.png "Game Screen Error")
 
 #### End Screen
+
 The end screen is one of the final aspects that the user will meet before the game is finished. The end screen offers two outcomes, either the user is successful or unsuccessful. If the user guesses the word correctly, the user is met with a message and a custom font "WINNER". If the user does not guess the word within the number of lives (6) the user is met with another message and the custom font stating "LOSER". 
 
 ![Winner](docs/screenshots/winner.png "Winner")
@@ -143,6 +153,7 @@ The Final feature of the game is a question to ask the user if wants to retry th
 ![Retry Validation](docs/screenshots/retry_validation.png "Retry Validation")
 
 ### Future Implementations
+
 * In the future, given more time I would like to improve adding designs and colour to the webpage, this would entice a user to stay on the page and recommend the page to others.
 * With more time and resources, I would like to implement a feature to share scores with others on social media.
 * With more time and resources, I would like to add a hint function to each word for user's who require additional help. 
@@ -159,6 +170,7 @@ The Final feature of the game is a question to ask the user if wants to retry th
 |During testing the draw hangman function would present the pole of the hanging station to mis-align and not be straight on console.|The error was caused by the additional `\`, to fix this I added another space bar to the hangman drawings affected and the pole was straight on console.|
 
 ### Unfixed Bugs
+
 A bug that was discovered during the testing phase by my team was that when the typewriter style printing functions were ran, pressing mutliple buttons or enter numerous times would keep looping some functions. As this is a bug I could not fix due to time constraints, I added an instruction to tell the user to wait for all the text to load before typing in a response. 
 
 ---
@@ -173,6 +185,7 @@ A bug that was discovered during the testing phase by my team was that when the 
 * Python
 
 ### Tools
+
 * [draw.io](https://app.diagrams.net/ "draw.io")
 * [Heroku](https://www.heroku.com/ "Heroku")
 * [Git](https://git-scm.com/ "Git")
@@ -187,6 +200,7 @@ A bug that was discovered during the testing phase by my team was that when the 
 ## Testing
 
 ### Testing group feedback
+
 | Testing Age Range |Constructive Feedback| Implemented? |
 |--|--|--|
 |14 - 18|Rather than just plain text, make the title a cooler font style|Yes|
@@ -197,6 +211,7 @@ A bug that was discovered during the testing phase by my team was that when the 
 |60 - 65|None, enjoyed the game and was simple |N/A|
 
 ### Functionality Testing
+
 |Test|Outcome| Pass or Fail |
 |--|--|--|
 |Entering an invalid input to the input including empty, numbers or symbols to username prompt function|Error thrown stating "Your name must contain letters only and atleast 1 character"| Pass|
@@ -224,13 +239,29 @@ A bug that was discovered during the testing phase by my team was that when the 
 |Entering "N" to retry option|Goodbye printed in logo styling, with an additional comment to press run programme to retry at a later time.| Pass|
 
 ### PEP8 Linter Testing
-As no extra additions were done to the HTML, CSS or JS files, validation checks were not performed. However, as all the code is written in python, all code was entered into [Python Linter](https://pep8ci.herokuapp.com/ "Python Linter"). The code ran through with no problems raised.
 
+As no extra additions were done to the HTML, CSS or JS files, validation checks were not performed. However, as all the code is written in python, all code was entered into [Python Linter](https://pep8ci.herokuapp.com/ "Python Linter"). The `__init__.py` file does not contain any content and therefore was not required to be tested.
 
+#### run.py
+
+![run.py validation](docs/screenshots/run_validation.png "run.py validation")
+
+#### main.py
+
+![main.py validation](docs/screenshots/main_validation.png "main.py validation")
+
+#### utility.py
+
+![utility.py validation](docs/screenshots/utility_validation.png "utility.py validation")
+
+#### words.py
+
+![words.py validation](docs/screenshots/words_validation.png "words.py validation")
 
 ---
 
 ## Concluding statements
+
 In conclusion, I am very proud of what I have built. Throughout the project, there were multiple errors I ran across which took a lot of time to fix, but it was worth it. The game I designed handles all invalid inputs, provides feedback to the user and replicates a classical game that is known by everyone around the globe. The game is intuitive and easy to use. My parents who are the least tech-savvy people I know, was able to play the game without any further instructions. Overall, the **requirements** of the game, such as the **goals**, **User stories**, **Site Owner's Goals** and **Expectations** have been met sufficiently. 
 
 ---
@@ -291,6 +322,7 @@ If you would like to fork any repositories, follow the steps below:
 ---
 
 ## Credits
+
 * [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/ "Simen Daehlin") - Assistance throughout the project
 * My testing team, this was a team of my colleagues, friends and family. - Thank you for all the rigerous testing and feedback.
 * [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w&ab_channel=Kite "Kite") - Example and inspirations of the hangman game. 
