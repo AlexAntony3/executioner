@@ -351,18 +351,6 @@ As a pure python code can only be displayed on a terminal of your own machine or
 
 ## Development
 
-### Cloning
-
-If you would like to clone any repositories, follow the steps below:
-* Log in to **GitHub**
-* Access the required repository or my repository by clicking the following link: [Executioner Repository](https://github.com/AlexAntony3/executioner  "Executioner Repository")
-* Click on the `<> Code` button.
-* In the **local** tab, select the **HTTPS** button and copy the URL.
-* Open up a new workspace
-* Use the `git clone` command In the command line of the workspace, paste in the copied URL. It should look like this:
-> git clone https://github.com/YOURUSERNAME/YOURREPOSITORY
-* Press **Enter** and the repository will be cloned!.
-
 ### Forking
 
 If you would like to fork any repositories, follow the steps below:
@@ -378,8 +366,21 @@ If you would like to fork any repositories, follow the steps below:
 * Choose whether to **copy** all branches or just the `default` branch. 
 * Click the Create Fork button and you have forked my repository.
 
+### Cloning
+
+If you would like to clone any repositories, follow the steps below:
+* Log in to **GitHub**
+* Access the required repository or my repository by clicking the following link: [Executioner Repository](https://github.com/AlexAntony3/executioner  "Executioner Repository")
+* Click on the `<> Code` button.
+* In the **local** tab, select the **HTTPS** button and copy the URL.
+* Open up a new workspace
+* Use the `git clone` command In the command line of the workspace, paste in the copied URL. It should look like this:
+> git clone https://github.com/YOURUSERNAME/YOURREPOSITORY
+* Press **Enter** and the repository will be cloned!.
+
 ### Local Development
 
+* After forking the repository, follow the cloning method to continue with development.
 * To run the programme on your development tool, make sure you have atleast version **3.8+** of python installed. 
 * To run the code on the development tool, type in the following to the terminal:
 > python3 run.py
