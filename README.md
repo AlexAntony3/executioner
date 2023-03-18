@@ -360,7 +360,9 @@ If you would like to fork any repositories, follow the steps below:
 * Log in to **GitHub**.
 * Navigate to the repository you would like to **fork**. 
 * At the top of the page, locate the **fork** icon
-![Fork Icon](docs/screenshots/fork "Fork Icon")
+
+![Fork Icon](docs/screenshots/fork.png "Fork Icon")
+
 * Click on the **downward** icon next to fork and press **create a new fork**.
 * Select an **owner** for the repository
 * **Change** the name of the repository if required
