@@ -1,3 +1,7 @@
+"""
+File for holding the main functions of the game
+"""
+
 from .utility import input_typing, draw_hangman, clear_screen, \
     pick_putdown, winner_logo, loser, intro_logo, typing, goodbye
 from .words import difficulty_level
