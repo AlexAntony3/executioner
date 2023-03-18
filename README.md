@@ -318,9 +318,14 @@ In conclusion, I am very proud of what I have built. Throughout the project, the
 
 ## Deployments
 
-As a pure python code can only be displayed on a terminal of your own machine or within gitpod, the code-instutute python essentials template is to be used on the workspace so that it can later be deployed to Heroku for user accessibility.
+As a pure python code can only be displayed on a terminal of your own machine or within gitpod, the code-instutute python essentials template is to be used on the workspace so that it can later be deployed to [Heroku](https://www.heroku.com/  "Heroku") for user accessibility.
 
-* add `\n` (newline) character for all inputs.
+### Pre-requisite requirements
+
+* add `\n` (newline) character for all inputs to your code.
+
+#### Optional step (if required)
+
 * If for the function of the game, dependancies are required, then all dependancies are to be transferred to **requirements.txt** by typing the following command into the terminal:
 
 >  pip3 freeze > requirements.txt
