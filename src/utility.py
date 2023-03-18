@@ -192,5 +192,5 @@ def goodbye():
 ╚██████╔╝╚█████╔╝╚█████╔╝██████╔╝██████╦╝░░░██║░░░███████╗
 ░╚═════╝░░╚════╝░░╚════╝░╚═════╝░╚═════╝░░░░╚═╝░░░╚══════╝
            psshhttt! if you do want to play again, press
-           the run programme button above
+           the run program button above
            """, "fast")
