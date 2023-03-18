@@ -74,6 +74,7 @@ The game is pretty simple so there's not too much to it
 * Interactive input requirement for the user with validation.
 * Feedback for success or failure.
 * Clear instructions displayed.
+* Have a sarcastic narrator tone throughout the game.
 
 ### User's Stories
 
@@ -82,6 +83,7 @@ The game is pretty simple so there's not too much to it
 * As a user, I want to have feedback if the same letter has already been guessed
 * As a user, I want an underscore to convert to the guessed letter if the guessed letter is contained in the secret word. 
 * As a user, I want to see the man hanged when all lives are lost. 
+* As a user, I want the user to be interacted by the comedic sarcastic narrator tone.
 
 ### Site Owner's Goals
 
